@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Game {
     int rounds = 8;
+    String game;
 
     void run() {
         getProperties();
@@ -20,33 +21,53 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         boolean stop = false;
 
+        String[] games = {"HigherLower", "Mastermind"};
         String[] modes = {"Challenger", "Defender", "Duel"};
 
         do {
-            System.out.println("Welcome ! Which mode do you wanna play ?");
+            System.out.println("Welcome, which game do you wanna play ?");
+
+            for (int i = 0; i < games.length; i++) System.out.println((i + 1) + " - " + games[i]);
+
+            int gameIndex = 0;
+            boolean gameError;
+
+            do {
+                try {
+                    gameIndex = scanner.nextInt();
+
+                    gameError = (gameIndex < 1 || gameIndex > 2);
+                } catch (InputMismatchException e) {
+                    scanner.next();
+                    gameError = true;
+                }
+            } while (gameError);
+
+            game = games[gameIndex - 1];
+            scanner.nextLine();
+
+            System.out.println("You have chosen the following game : " + game + " ! Which mode do you wanna play ?");
 
             for (int i = 0; i < modes.length; i++) System.out.println((i + 1) + " - " + modes[i]);
 
-            int mode = 0;
+            int modeIndex = 0;
             boolean modeError;
 
             do {
                 try {
-                    mode = scanner.nextInt();
+                    modeIndex = scanner.nextInt();
 
-                    modeError = (mode < 1 || mode > 3);
+                    modeError = (modeIndex < 1 || modeIndex > 3);
                 } catch (InputMismatchException e) {
                     scanner.next();
                     modeError = true;
                 }
-
-                System.out.println(modeError);
             } while (modeError);
 
-            runMode(mode);
+            runMode(modeIndex);
+            scanner.nextLine();
 
             String replay;
-            scanner.nextLine();
 
             do {
                 System.out.println("Do you want to continue to play ? (y/n)");
@@ -60,15 +81,15 @@ public class Game {
     private void runMode(int mode) {
         switch (mode) {
             case 1:
-                new Challenger(rounds).run();
+                new Challenger(rounds, game).run();
 
                 break;
             case 2:
-                new Defender(rounds).run();
+                new Defender(rounds, game).run();
 
                 break;
             case 3:
-                new Duel().run();
+                new Duel(rounds, game).run();
 
                 break;
         }

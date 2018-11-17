@@ -1,19 +1,16 @@
 package net.spetnix.project.modes;
 
 import java.util.Random;
-import java.util.Scanner;
 
-public class Challenger {
-    private int rounds;
-
-    public Challenger(int rounds) {
-        this.rounds = rounds;
+public class Challenger extends Modes {
+    public Challenger(int rounds, String game) {
+        super(rounds, game);
     }
 
     public void run() {
         Random random = new Random();
 
-        System.out.println("Welcome in the Challenger modes : your goal will be to find the combination of the computer. You'll have " + rounds + " rounds to find it.");
+        System.out.println("Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + rounds + " rounds to find it.");
 
         String code = "";
         String userCode;
@@ -32,49 +29,12 @@ public class Challenger {
 
                 return;
             } else {
-                System.out.println("Proposition : " + userCode + " --> " + compareCodes(code, userCode));
+                System.out.println("Proposition : " + userCode + " --> " + compareCodes(code, userCode, game));
             }
 
             round++;
         }
 
         System.out.println("Sadly, you didn't find the combination which was : " + code);
-    }
-
-    private String userGuess() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter a combination with 4 numbers :");
-
-        String userCode;
-
-        userCode = scanner.next();
-
-        while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
-            System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
-
-            userCode = scanner.next();
-        }
-
-        return userCode;
-    }
-
-    private String compareCodes(String code, String userCode) {
-        String difference = "";
-
-        for (int i = 0; i < 4; i++) {
-            int number = code.charAt(i);
-            int userNumber = userCode.charAt(i);
-
-            if (number > userNumber) {
-                difference += ">";
-            } else if (number == userNumber) {
-                difference += "=";
-            } else {
-                difference += "<";
-            }
-        }
-
-        return difference;
     }
 }
