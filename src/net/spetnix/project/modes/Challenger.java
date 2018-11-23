@@ -2,7 +2,7 @@ package net.spetnix.project.modes;
 
 import java.util.Random;
 
-public class Challenger extends Modes {
+public class Challenger extends Mode {
     public Challenger(int rounds, String game) {
         super(rounds, game);
     }

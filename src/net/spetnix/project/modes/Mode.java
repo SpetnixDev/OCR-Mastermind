@@ -1,15 +1,16 @@
 package net.spetnix.project.modes;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public abstract class Modes {
+public abstract class Mode {
     Scanner scanner = new Scanner(System.in);
     protected int rounds;
 
     protected String game;
 
-    Modes(int rounds, String game) {
+    Mode(int rounds, String game) {
         this.rounds = rounds;
         this.game = game;
     }
@@ -35,17 +36,54 @@ public abstract class Modes {
     protected String compareCodes(String code, String userCode, String game) {
         String difference = "";
 
-        for (int i = 0; i < 4; i++) {
-            int number = code.charAt(i);
-            int userNumber = userCode.charAt(i);
+        switch (game) {
+            case "HigherLower":
+                for (int i = 0; i < 4; i++) {
+                    int number = code.charAt(i);
+                    int userNumber = userCode.charAt(i);
 
-            if (number > userNumber) {
-                difference += ">";
-            } else if (number == userNumber) {
-                difference += "=";
-            } else {
-                difference += "<";
-            }
+                    if (number > userNumber) {
+                        difference += ">";
+                    } else if (number == userNumber) {
+                        difference += "=";
+                    } else {
+                        difference += "<";
+                    }
+                }
+
+                break;
+            case "Mastermind":
+                ArrayList<Integer> checked = new ArrayList<>();
+
+                for (int i = 0; i < 4; i ++) {
+                    for (int j = 0; j < 4; j ++) {
+                       if (checked.contains(j)) continue;
+
+                       if (code.charAt(j) == userCode.charAt(i)) {
+                           checked.add(j);
+
+                           break;
+                       }
+                    }
+                }
+
+                int wellPlaced = 0;
+
+                for (int i = 0; i < 4; i++) {
+                    int number = code.charAt(i);
+                    int userNumber = userCode.charAt(i);
+
+                    if (number == userNumber) {
+                        wellPlaced ++;
+                    }
+                }
+
+                String wellPlacedMsg = (wellPlaced == 0) ? "" : "- " + wellPlaced + " well placed ";
+                String misplacedMsg = (checked.size() - wellPlaced == 0) ? "" : "- " + (checked.size() - wellPlaced) + " misplaced";
+
+                difference = (wellPlaced + checked.size() == 0) ? "No matches" : wellPlacedMsg + misplacedMsg;
+
+                break;
         }
 
         return difference;

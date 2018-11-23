@@ -1,6 +1,6 @@
 package net.spetnix.project.modes;
 
-public class Duel extends Modes {
+public class Duel extends Mode {
     public Duel(int rounds, String game) {
         super(rounds, game);
     }

@@ -2,7 +2,7 @@ package net.spetnix.project.modes;
 
 import java.util.Scanner;
 
-public class Defender extends Modes {
+public class Defender extends Mode {
     Scanner scanner = new Scanner(System.in);
 
     public Defender(int rounds, String game) {
