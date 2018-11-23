@@ -10,6 +10,15 @@ public class Duel extends Mode {
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
                 "You'll have " + rounds + " rounds to find your opponent's code.");
 
+        System.out.println("To start, enter the combination that the computer will have to guess: ");
 
+        String userCode = setupCode();
+
+        int round = 1;
+
+        while (round <= rounds) {
+
+            round++;
+        }
     }
 }

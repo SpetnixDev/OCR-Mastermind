@@ -15,14 +15,28 @@ public class Defender extends Mode {
 
         System.out.println("Please enter a combination with 4 numbers :");
 
-        String userCode = scanner.next();
+        String userCode = setupCode();
 
-        while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
-            System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
+        String code = "";
+        String difference = "";
+        int round = 1;
 
-            userCode = scanner.next();
+        while (round <= rounds) {
+            System.out.println("Round : " + round);
+
+            code = computerGuess(round == 1, difference, code);
+
+            System.out.println("Proposition : " + code);
+
+            if (code.equalsIgnoreCase(userCode)) {
+                System.out.println("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
+            } else {
+                difference = returnDifference();
+            }
+
+            round++;
         }
 
-        runComputerGuess(userCode);
+        System.out.println("Sadly, the computer didn't find the combination which was : " + userCode);
     }
 }
