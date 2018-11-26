@@ -18,7 +18,7 @@ public abstract class Mode {
     public abstract void run();
 
     protected String userGuess() {
-        System.out.println("Enter a combination with 4 numbers :");
+        System.out.println("\nEnter a combination with 4 numbers :");
 
         String userCode;
 

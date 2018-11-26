@@ -8,8 +8,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
+    Scanner scanner = new Scanner(System.in);
+
     int rounds = 8;
+
     String game;
+    int mode;
 
     void run() {
         getProperties();
@@ -18,62 +22,21 @@ public class Game {
     }
 
     private void runMenu() {
-        Scanner scanner = new Scanner(System.in);
         boolean stop = false;
 
-        String[] games = {"HigherLower", "Mastermind"};
-        String[] modes = {"Challenger", "Defender", "Duel"};
+        System.out.println("Welcome !");
 
         do {
-            System.out.println("Welcome, which game do you wanna play ?");
-
-            for (int i = 0; i < games.length; i++) System.out.println((i + 1) + " - " + games[i]);
-
-            int gameIndex = 0;
-            boolean gameError;
-
-            do {
-                try {
-                    gameIndex = scanner.nextInt();
-
-                    gameError = (gameIndex < 1 || gameIndex > 2);
-                } catch (InputMismatchException e) {
-                    scanner.next();
-                    gameError = true;
-                }
-            } while (gameError);
-
-            game = games[gameIndex - 1];
-            scanner.nextLine();
-
-            System.out.println("You have chosen the following game : " + game + " ! Which mode do you wanna play ?");
-
-            for (int i = 0; i < modes.length; i++) System.out.println((i + 1) + " - " + modes[i]);
-
-            int modeIndex = 0;
-            boolean modeError;
-
-            do {
-                try {
-                    modeIndex = scanner.nextInt();
-
-                    modeError = (modeIndex < 1 || modeIndex > 3);
-                } catch (InputMismatchException e) {
-                    scanner.next();
-                    modeError = true;
-                }
-            } while (modeError);
-
-            runMode(modeIndex);
-            scanner.nextLine();
+            setGame();
 
             String replay;
 
             do {
-                System.out.println("Do you want to continue to play ? (y/n)");
+                System.out.println("\nDo you want to continue to play ? (y/n)");
                 replay = scanner.nextLine();
             } while (replay.equalsIgnoreCase("n") && replay.equalsIgnoreCase("y"));
 
+            System.out.println(" ");
             if (replay.equalsIgnoreCase("n")) stop = true;
         } while (!stop);
     }
@@ -92,6 +55,68 @@ public class Game {
                 new Duel(rounds, game).run();
 
                 break;
+        }
+    }
+
+    private void setGame() {
+        String[] games = {"HigherLower", "Mastermind"};
+
+        System.out.println("\nWhich game do you wanna play ?");
+
+        for (int i = 0; i < games.length; i++) System.out.println((i + 1) + " - " + games[i]);
+
+        int gameIndex = 0;
+        boolean gameError;
+
+        do {
+            try {
+                gameIndex = scanner.nextInt();
+
+                gameError = (gameIndex < 1 || gameIndex > 2);
+            } catch (InputMismatchException e) {
+                scanner.next();
+                gameError = true;
+            }
+        } while (gameError);
+
+        game = games[gameIndex - 1];
+
+        System.out.println("You have chosen the following game : " + game + " !");
+
+        scanner.nextLine();
+
+        setMode();
+    }
+
+    private void setMode() {
+        String[] modes = {"Challenger", "Defender", "Duel", "Go back"};
+
+        System.out.println("\nWhich mode do you wanna play ?");
+
+        for (int i = 0; i < modes.length; i++) System.out.println((i + 1) + " - " + modes[i]);
+
+        int modeIndex = 0;
+        boolean modeError;
+
+        do {
+            try {
+                modeIndex = scanner.nextInt();
+
+                modeError = (modeIndex < 1 || modeIndex > 4);
+            } catch (InputMismatchException e) {
+                scanner.next();
+                modeError = true;
+            }
+        } while (modeError);
+
+        scanner.nextLine();
+
+        if (modeIndex == 4) {
+            setGame();
+        } else {
+            mode = modeIndex;
+
+            runMode(mode);
         }
     }
 

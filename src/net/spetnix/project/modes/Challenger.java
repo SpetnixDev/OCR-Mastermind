@@ -10,12 +10,14 @@ public class Challenger extends Mode {
     public void run() {
         Random random = new Random();
 
-        System.out.println("Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + rounds + " rounds to find it.");
+        System.out.println("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + rounds + " rounds to find it.");
 
         String code = "";
         String userCode;
 
         for (int i = 0; i < 4; i++) code += String.valueOf(random.nextInt(10));
+
+        System.out.println("The computer created its combination.");
 
         int round = 1;
 

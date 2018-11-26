@@ -10,7 +10,7 @@ public class Defender extends Mode {
     }
 
     public void run() {
-        System.out.println("Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
+        System.out.println("\nWelcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
                 " The computer will have " + rounds + " rounds to find it.");
 
         System.out.println("Please enter a combination with 4 numbers :");
@@ -26,10 +26,12 @@ public class Defender extends Mode {
 
             code = computerGuess(round == 1, difference, code);
 
-            System.out.println("Proposition : " + code);
+            System.out.println("Computer's proposition : " + code);
 
             if (code.equalsIgnoreCase(userCode)) {
                 System.out.println("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
+
+                return;
             } else {
                 difference = returnDifference();
             }
