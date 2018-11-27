@@ -1,12 +1,12 @@
 package net.spetnix.project.modes;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import net.spetnix.project.Game;
+
 import java.util.Random;
 
 public class Duel extends Mode {
-    public Duel(int rounds, String game) {
-        super(rounds, game);
+    public Duel(int rounds, String game, Game g) {
+        super(rounds, game, g);
     }
 
     public void run() {

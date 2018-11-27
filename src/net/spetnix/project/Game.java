@@ -15,13 +15,11 @@ public class Game {
     String game;
     int mode;
 
-    void run() {
+    public Game() {
         getProperties();
-
-        runMenu();
     }
 
-    private void runMenu() {
+    public void runMenu() {
         boolean stop = false;
 
         System.out.println("Welcome !");
@@ -41,18 +39,18 @@ public class Game {
         } while (!stop);
     }
 
-    private void runMode(int mode) {
+    private void runMode(int mode, Game g) {
         switch (mode) {
             case 1:
-                new Challenger(rounds, game).run();
+                new Challenger(rounds, game, g).run();
 
                 break;
             case 2:
-                new Defender(rounds, game).run();
+                new Defender(rounds, game, g).run();
 
                 break;
             case 3:
-                new Duel(rounds, game).run();
+                new Duel(rounds, game, g).run();
 
                 break;
         }
@@ -116,7 +114,7 @@ public class Game {
         } else {
             mode = modeIndex;
 
-            runMode(mode);
+            runMode(mode, this);
         }
     }
 

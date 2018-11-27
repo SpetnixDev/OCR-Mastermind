@@ -1,10 +1,12 @@
 package net.spetnix.project.modes;
 
+import net.spetnix.project.Game;
+
 import java.util.Random;
 
 public class Challenger extends Mode {
-    public Challenger(int rounds, String game) {
-        super(rounds, game);
+    public Challenger(int rounds, String game, Game g) {
+        super(rounds, game, g);
     }
 
     public void run() {

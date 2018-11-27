@@ -1,12 +1,10 @@
 package net.spetnix.project.modes;
 
-import java.util.Scanner;
+import net.spetnix.project.Game;
 
 public class Defender extends Mode {
-    Scanner scanner = new Scanner(System.in);
-
-    public Defender(int rounds, String game) {
-        super(rounds, game);
+    public Defender(int rounds, String game, Game g) {
+        super(rounds, game, g);
     }
 
     public void run() {

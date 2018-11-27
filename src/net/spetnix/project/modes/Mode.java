@@ -1,5 +1,7 @@
 package net.spetnix.project.modes;
 
+import net.spetnix.project.Game;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -9,10 +11,12 @@ public abstract class Mode {
     protected int rounds;
 
     protected String game;
+    Game g;
 
-    Mode(int rounds, String game) {
+    Mode(int rounds, String game, Game g) {
         this.rounds = rounds;
         this.game = game;
+        this.g = g;
     }
 
     public abstract void run();
@@ -25,6 +29,8 @@ public abstract class Mode {
         userCode = scanner.next();
 
         while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
+            if (userCode.equalsIgnoreCase("stop")) stop();
+
             System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
 
             userCode = scanner.next();
@@ -126,6 +132,8 @@ public abstract class Mode {
         String userCode = scanner.next();
 
         while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
+            if (userCode.equalsIgnoreCase("stop")) stop();
+
             System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
 
             userCode = scanner.next();
@@ -145,6 +153,8 @@ public abstract class Mode {
         for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
 
         while (difference.length() != 4 || containsFalse) {
+            if (difference.equalsIgnoreCase("stop")) stop();
+
             containsFalse = false;
             System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
 
@@ -156,7 +166,8 @@ public abstract class Mode {
         return difference;
     }
 
-    protected void stop() {
-
+    private void stop() {
+        System.out.println(" ");
+        g.runMenu();
     }
 }
