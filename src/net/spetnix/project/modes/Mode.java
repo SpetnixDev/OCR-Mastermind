@@ -142,15 +142,21 @@ public abstract class Mode {
         difference = scanner.next();
         boolean containsFalse = false;
 
-        for (int i = 0; i < difference.length(); i++) {
-            if (!("<>=".contains(Character.toString(difference.charAt(i))))) containsFalse = true;
-        }
+        for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
 
         while (difference.length() != 4 || containsFalse) {
+            containsFalse = false;
             System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
+
             difference = scanner.next();
+
+            for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
         }
 
         return difference;
+    }
+
+    protected void stop() {
+
     }
 }

@@ -71,6 +71,10 @@ public class Duel extends Mode {
             round++;
         }
 
+        printResults(code, userCode, computerFound, userFound);
+    }
+
+    private void printResults(String code, String userCode, int computerFound, int userFound) {
         System.out.println("\n- Results : \n");
 
         if (userFound > 0) {
@@ -87,9 +91,9 @@ public class Duel extends Mode {
 
         System.out.println(" ");
 
-        if (userFound < computerFound || (userFound > 0 && computerFound == 0)) {
+        if ((userFound != 0 && userFound < computerFound) || (userFound != 0 && computerFound == 0)) {
             System.out.println("You WON !");
-        } else if (userFound > computerFound || (computerFound > 0 && userFound == 0)) {
+        } else if ((computerFound != 0 && computerFound < userFound) || (computerFound != 0 && userFound == 0)) {
             System.out.println("The computer WON !");
         } else {
             System.out.println("That's a DRAW !");
