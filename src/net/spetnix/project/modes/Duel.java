@@ -35,6 +35,8 @@ public class Duel extends Mode {
 
         int round = 1;
 
+        String[] computerGuesses = {"", ""};
+
         while (round <= rounds) {
             System.out.println("\nRound : " + round);
 
@@ -51,7 +53,10 @@ public class Duel extends Mode {
             }
 
             if (computerFound == 0) {
-                computerGuess = computerGuess(round == 1, difference, computerGuess);
+                computerGuess = computerGuess(round, difference, computerGuesses);
+
+                computerGuesses[0] = computerGuesses[1];
+                computerGuesses[1] = computerGuess;
 
                 System.out.println("\nComputer's proposition : " + computerGuess);
 

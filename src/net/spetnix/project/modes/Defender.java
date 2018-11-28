@@ -19,10 +19,15 @@ public class Defender extends Mode {
         String difference = "";
         int round = 1;
 
+        String[] codes = {"", ""};
+
         while (round <= rounds) {
             System.out.println("Round : " + round);
 
-            code = computerGuess(round == 1, difference, code);
+            code = computerGuess(round, difference, codes);
+
+            codes[0] = codes[1];
+            codes[1] = code;
 
             System.out.println("Computer's proposition : " + code);
 

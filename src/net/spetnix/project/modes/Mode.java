@@ -95,30 +95,93 @@ public abstract class Mode {
         return difference;
     }
 
-    protected String computerGuess(boolean isFirstRound, String difference, String codeBefore) {
+    protected String computerGuess(int round, String difference, String[] codesBefore) {
         Random random = new Random();
 
         StringBuilder code = new StringBuilder();
 
-        if (isFirstRound) {
+        if (round == 1) {
             for (int i = 0; i < 4; i++) code.append(String.valueOf(random.nextInt(10)));
         } else {
-            code = new StringBuilder(codeBefore);
+            code = new StringBuilder(codesBefore[1]);
 
             for (int i = 0; i < 4; i++) {
                 int currentNumber = code.charAt(i);
+                currentNumber -= 48;
+
+                int newNumber;
 
                 switch (difference.charAt(i)) {
                     case '>':
-                        code.setCharAt(i, (char) (currentNumber + 1));
+                        if (round == 2) {
+                            newNumber = currentNumber + ((9 - currentNumber) / 2);
+
+                            if ((9 - currentNumber) % 2 == 0) {
+                                newNumber += 48;
+                            } else {
+                                newNumber += 49;
+                            }
+                        } else {
+                            int numberBefore = codesBefore[0].charAt(i) - 48;
+
+                            if (numberBefore > currentNumber) {
+                                newNumber = currentNumber + ((numberBefore - currentNumber) / 2);
+
+                                if ((numberBefore - currentNumber) % 2 == 0) {
+                                    newNumber += 48;
+                                } else {
+                                    newNumber += 49;
+                                }
+                            } else {
+                                newNumber = currentNumber + ((9 - currentNumber) / 2);
+
+                                if ((9 - currentNumber) % 2 == 0) {
+                                    newNumber += 48;
+                                } else {
+                                    newNumber += 49;
+                                }
+                            }
+                        }
+
+                        code.setCharAt(i, (char) newNumber);
 
                         break;
                     case '<':
-                        code.setCharAt(i, (char) (currentNumber - 1));
+                        if (round == 2) {
+                            newNumber = currentNumber - (currentNumber / 2);
+
+                            if (currentNumber % 2 == 0) {
+                                newNumber += 48;
+                            } else {
+                                newNumber += 47;
+                            }
+                        } else {
+                            int numberBefore = codesBefore[0].charAt(i) - 48;
+
+                            if (numberBefore < currentNumber) {
+                                newNumber = currentNumber - ((currentNumber - numberBefore) / 2);
+
+                                if ((currentNumber - numberBefore) % 2 == 0) {
+                                    newNumber += 48;
+                                } else {
+                                    newNumber += 47;
+                                }
+                            } else {
+                                newNumber = currentNumber - (currentNumber / 2);
+
+                                if (currentNumber % 2 == 0) {
+                                    newNumber += 48;
+                                } else {
+                                    newNumber += 47;
+                                }
+                            }
+                        }
+
+                        code.setCharAt(i, (char) newNumber);
 
                         break;
                     case '=':
-                        code.setCharAt(i, (char) (currentNumber));
+                        code.setCharAt(i, (char) (currentNumber + 48));
 
                         break;
                 }
@@ -143,24 +206,29 @@ public abstract class Mode {
     }
 
     protected String returnDifference() {
-        String difference;
+        String difference = "";
 
-        System.out.println("Tell now the computer the result of its proposition with (>, <, =) for each number.");
+        switch (game) {
+            case "HigherLower":
+                System.out.println("Tell now the computer the result of its proposition with (>, <, =) for each number.");
 
-        difference = scanner.next();
-        boolean containsFalse = false;
+                difference = scanner.next();
+                boolean containsFalse = false;
 
-        for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
+                for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
 
-        while (difference.length() != 4 || containsFalse) {
-            if (difference.equalsIgnoreCase("stop")) stop();
+                while (difference.length() != 4 || containsFalse) {
+                    if (difference.equalsIgnoreCase("stop")) stop();
 
-            containsFalse = false;
-            System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
+                    containsFalse = false;
+                    System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
 
-            difference = scanner.next();
+                    difference = scanner.next();
 
-            for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
+                    for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
+                }
+
+                break;
         }
 
         return difference;
@@ -168,6 +236,7 @@ public abstract class Mode {
 
     private void stop() {
         System.out.println(" ");
+
         g.runMenu();
     }
 }
