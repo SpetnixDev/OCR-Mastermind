@@ -7,6 +7,9 @@ public class Defender extends Mode {
         super(rounds, game, g);
     }
 
+    /**
+     * Starts the Defender Mode.
+     */
     public void run() {
         System.out.println("\nWelcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
                 " The computer will have " + rounds + " rounds to find it.");

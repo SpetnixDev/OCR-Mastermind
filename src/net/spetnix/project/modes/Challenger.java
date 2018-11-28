@@ -9,6 +9,9 @@ public class Challenger extends Mode {
         super(rounds, game, g);
     }
 
+    /**
+     * Starts the Challenger Mode.
+     */
     public void run() {
         Random random = new Random();
 

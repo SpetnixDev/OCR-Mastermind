@@ -7,6 +7,9 @@ import net.spetnix.project.modes.Duel;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * This class contains the whole game.
+ */
 public class Game {
     Scanner scanner = new Scanner(System.in);
 
@@ -19,6 +22,9 @@ public class Game {
         getProperties();
     }
 
+    /**
+     * Runs the menu.
+     */
     public void runMenu() {
         boolean stop = false;
 
@@ -39,6 +45,14 @@ public class Game {
         } while (!stop);
     }
 
+    /**
+     * Starts the chosen mode.
+     *
+     * @param mode The chosen mode.
+     * @param g An instance of the Game class.
+     *
+     * @see Game
+     */
     private void runMode(int mode, Game g) {
         switch (mode) {
             case 1:
@@ -56,6 +70,11 @@ public class Game {
         }
     }
 
+    /**
+     * Asks the user which game they wanna play.
+     *
+     * @see #setMode()
+     */
     private void setGame() {
         String[] games = {"HigherLower", "Mastermind"};
 
@@ -86,6 +105,12 @@ public class Game {
         setMode();
     }
 
+    /**
+     * Asks the user which mode they wanna play.
+     *
+     * @see #setGame()
+     * @see #runMode(int, Game)
+     */
     private void setMode() {
         String[] modes = {"Challenger", "Defender", "Duel", "Go back"};
 

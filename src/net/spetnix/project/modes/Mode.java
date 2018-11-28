@@ -19,8 +19,16 @@ public abstract class Mode {
         this.g = g;
     }
 
+    /**
+     * Starts the current Mode.
+     */
     public abstract void run();
 
+    /**
+     * Asks the user for a new guess and returns it.
+     *
+     * @return The new guess of the user.
+     */
     protected String userGuess() {
         System.out.println("\nEnter a combination with 4 numbers :");
 
@@ -39,6 +47,15 @@ public abstract class Mode {
         return userCode;
     }
 
+    /**
+     * Compares the user's guess and the computer's combination.
+     *
+     * @param code The computer's combination.
+     * @param userCode The user's guess.
+     * @param game The game played (HigherLower / Mastermind).
+     *
+     * @return A string, explaining the user the differences between their guess and the computer's combination.
+     */
     protected String compareCodes(String code, String userCode, String game) {
         String difference = "";
 
@@ -95,6 +112,17 @@ public abstract class Mode {
         return difference;
     }
 
+    /**
+     * Asks the computer for a new guess depending of the answer of the user and returns it.
+     *
+     * @param round The current round of the game.
+     * @param difference The answer of the user to the computer's guess of the last round.
+     * @param codesBefore An array containing the guesses of the computer of the two last rounds.
+     *
+     * @return The new guess of the computer.
+     *
+     * @see #returnDifference()
+     */
     protected String computerGuess(int round, String difference, String[] codesBefore) {
         Random random = new Random();
 
@@ -191,6 +219,11 @@ public abstract class Mode {
         return code.toString();
     }
 
+    /**
+     * Asks the user to create the combination that the computer will have to guess.
+     *
+     * @return The combination created by the user.
+     */
     protected String setupCode() {
         String userCode = scanner.next();
 
@@ -205,6 +238,11 @@ public abstract class Mode {
         return userCode;
     }
 
+    /**
+     * Asks the user to return to the computer the differences between their combination and the computer's guess.
+     *
+     * @return A string, explaining the computer the differences between its guess and the user's combination.
+     */
     protected String returnDifference() {
         String difference = "";
 
@@ -234,6 +272,9 @@ public abstract class Mode {
         return difference;
     }
 
+    /**
+     * Stops the game and returns to the menu.
+     */
     private void stop() {
         System.out.println(" ");
 

@@ -9,6 +9,9 @@ public class Duel extends Mode {
         super(rounds, game, g);
     }
 
+    /**
+     * Starts the Duel Mode.
+     */
     public void run() {
         Random random = new Random();
 
@@ -79,6 +82,14 @@ public class Duel extends Mode {
         printResults(code, userCode, computerFound, userFound);
     }
 
+    /**
+     * Displays the results of the game.
+     *
+     * @param code The computer's code.
+     * @param userCode The user's code.
+     * @param computerFound The number of rounds the computer took to find the combination.
+     * @param userFound The number of rounds the user took to find the combination.
+     */
     private void printResults(String code, String userCode, int computerFound, int userFound) {
         System.out.println("\n- Results : \n");
 
