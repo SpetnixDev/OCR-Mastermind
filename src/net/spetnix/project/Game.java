@@ -4,7 +4,11 @@ import net.spetnix.project.modes.Challenger;
 import net.spetnix.project.modes.Defender;
 import net.spetnix.project.modes.Duel;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.InputMismatchException;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
@@ -166,5 +170,23 @@ public class Game {
 
     private void getProperties() {
         //todo: Add file .properties and get config here
+        final Properties prop = new Properties();
+        InputStream input = null;
+
+        try {
+            input = new FileInputStream("src/config.properties");
+
+            prop.load(input);
+        } catch (final IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (final IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
