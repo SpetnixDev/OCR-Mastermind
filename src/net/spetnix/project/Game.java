@@ -18,6 +18,8 @@ public class Game {
     String game;
     int mode;
 
+    boolean stop = false;
+
     public Game() {
         getProperties();
     }
@@ -26,22 +28,14 @@ public class Game {
      * Runs the menu.
      */
     public void runMenu() {
-        boolean stop = false;
+        int next = 0;
 
         System.out.println("Welcome !");
 
         do {
             setGame();
 
-            String replay;
-
-            do {
-                System.out.println("\nDo you want to continue to play ? (y/n)");
-                replay = scanner.nextLine();
-            } while (replay.equalsIgnoreCase("n") && replay.equalsIgnoreCase("y"));
-
-            System.out.println(" ");
-            if (replay.equalsIgnoreCase("n")) stop = true;
+            runEndMenu();
         } while (!stop);
     }
 
@@ -140,6 +134,33 @@ public class Game {
             mode = modeIndex;
 
             runMode(mode, this);
+        }
+    }
+
+    private void runEndMenu() {
+        int replay = 0;
+        boolean replayError;
+
+        do {
+            try {
+                System.out.println("\nWhat do you wanna do ?");
+                System.out.println("1 - Replay");
+                System.out.println("2 - Play a different game");
+                System.out.println("3 - Quit game");
+
+                replay = scanner.nextInt();
+
+                replayError = (replay > 3 || replay < 1);
+            } catch (InputMismatchException e) {
+                scanner.next();
+                replayError = true;
+            }
+        } while (replayError);
+
+        if (replay == 1) {
+            runMode(mode, this);
+        } else if (replay == 3) {
+            stop = true;
         }
     }
 

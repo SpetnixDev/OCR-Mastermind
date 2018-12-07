@@ -27,7 +27,7 @@ public class Challenger extends Mode {
         int round = 1;
 
         while (round <= rounds) {
-            System.out.println("Round : " + round);
+            System.out.println("\nRound : " + round);
 
             userCode = userGuess();
 

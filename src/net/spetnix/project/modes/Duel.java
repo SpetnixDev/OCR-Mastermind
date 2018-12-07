@@ -15,7 +15,7 @@ public class Duel extends Mode {
     public void run() {
         Random random = new Random();
 
-            System.out.println("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
+        System.out.println("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
                 "You'll have " + rounds + " rounds to find your opponent's code.\n");
 

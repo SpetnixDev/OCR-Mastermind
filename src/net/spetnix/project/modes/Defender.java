@@ -18,7 +18,7 @@ public class Defender extends Mode {
 
         String userCode = setupCode();
 
-        String code = "";
+        String code;
         String difference = "";
         int round = 1;
 

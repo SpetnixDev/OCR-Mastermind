@@ -138,10 +138,15 @@ public abstract class Mode {
                 currentNumber -= 48;
 
                 int newNumber;
+                int numberBefore = 0;
+
+                if (round > 2) {
+                    numberBefore = codesBefore[0].charAt(i) - 48;
+                }
 
                 switch (difference.charAt(i)) {
                     case '>':
-                        if (round == 2) {
+                        if (round == 2 || (round > 2 && numberBefore < currentNumber)) {
                             newNumber = currentNumber + ((9 - currentNumber) / 2);
 
                             if ((9 - currentNumber) % 2 == 0) {
@@ -150,24 +155,12 @@ public abstract class Mode {
                                 newNumber += 49;
                             }
                         } else {
-                            int numberBefore = codesBefore[0].charAt(i) - 48;
+                            newNumber = currentNumber + ((numberBefore - currentNumber) / 2);
 
-                            if (numberBefore > currentNumber) {
-                                newNumber = currentNumber + ((numberBefore - currentNumber) / 2);
-
-                                if ((numberBefore - currentNumber) % 2 == 0) {
-                                    newNumber += 48;
-                                } else {
-                                    newNumber += 49;
-                                }
+                            if ((numberBefore - currentNumber) % 2 == 0) {
+                                newNumber += 48;
                             } else {
-                                newNumber = currentNumber + ((9 - currentNumber) / 2);
-
-                                if ((9 - currentNumber) % 2 == 0) {
-                                    newNumber += 48;
-                                } else {
-                                    newNumber += 49;
-                                }
+                                newNumber += 49;
                             }
                         }
 
@@ -175,7 +168,7 @@ public abstract class Mode {
 
                         break;
                     case '<':
-                        if (round == 2) {
+                        if (round == 2 || (round > 2 && numberBefore > currentNumber)) {
                             newNumber = currentNumber - (currentNumber / 2);
 
                             if (currentNumber % 2 == 0) {
@@ -184,24 +177,12 @@ public abstract class Mode {
                                 newNumber += 47;
                             }
                         } else {
-                            int numberBefore = codesBefore[0].charAt(i) - 48;
+                            newNumber = currentNumber - ((currentNumber - numberBefore) / 2);
 
-                            if (numberBefore < currentNumber) {
-                                newNumber = currentNumber - ((currentNumber - numberBefore) / 2);
-
-                                if ((currentNumber - numberBefore) % 2 == 0) {
-                                    newNumber += 48;
-                                } else {
-                                    newNumber += 47;
-                                }
+                            if ((currentNumber - numberBefore) % 2 == 0) {
+                                newNumber += 48;
                             } else {
-                                newNumber = currentNumber - (currentNumber / 2);
-
-                                if (currentNumber % 2 == 0) {
-                                    newNumber += 48;
-                                } else {
-                                    newNumber += 47;
-                                }
+                                newNumber += 47;
                             }
                         }
 
