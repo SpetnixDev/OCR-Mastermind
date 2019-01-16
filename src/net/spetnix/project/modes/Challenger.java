@@ -5,8 +5,8 @@ import net.spetnix.project.Game;
 import java.util.Random;
 
 public class Challenger extends Mode {
-    public Challenger(int rounds, String game, Game g) {
-        super(rounds, game, g);
+    public Challenger(String game, Game g) {
+        super(game, g);
     }
 
     /**
@@ -15,7 +15,7 @@ public class Challenger extends Mode {
     public void run() {
         Random random = new Random();
 
-        System.out.println("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + rounds + " rounds to find it.");
+        System.out.println("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + g.getRounds() + " rounds to find it.");
 
         String code = "";
         String userCode;
@@ -26,7 +26,7 @@ public class Challenger extends Mode {
 
         int round = 1;
 
-        while (round <= rounds) {
+        while (round <= g.getRounds()) {
             System.out.println("\nRound : " + round);
 
             userCode = userGuess();

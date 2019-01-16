@@ -8,16 +8,19 @@ import java.util.Scanner;
 
 public abstract class Mode {
     Scanner scanner = new Scanner(System.in);
-    protected int rounds;
 
     protected String game;
     Game g;
 
-    Mode(int rounds, String game, Game g) {
-        this.rounds = rounds;
+    Mode(String game, Game g) {
         this.game = game;
         this.g = g;
     }
+
+    int hlLength = g.getHigherLowerLength();
+    int mmLength = g.getMastermindLength();
+
+    int mmPossibilities = g.getMastermindPossibilities();
 
     /**
      * Starts the current Mode.
@@ -123,77 +126,119 @@ public abstract class Mode {
      *
      * @see #returnDifference()
      */
-    protected String computerGuess(int round, String difference, String[] codesBefore) {
+    protected String computerGuess(int round, String difference, String[] codesBefore, String game) {
         Random random = new Random();
 
         StringBuilder code = new StringBuilder();
 
         if (round == 1) {
-            for (int i = 0; i < 4; i++) code.append(String.valueOf(random.nextInt(10)));
+            for (int i = 0; i < 4; i++) code.append(random.nextInt(10));
         } else {
             code = new StringBuilder(codesBefore[1]);
 
-            for (int i = 0; i < 4; i++) {
-                int currentNumber = code.charAt(i);
-                currentNumber -= 48;
+            switch (game) {
+                case "HigherLower":
+                    for (int i = 0; i < hlLength; i++) {
+                        int currentNumber = code.charAt(i);
+                        currentNumber -= 48;
 
-                int newNumber;
-                int numberBefore = 0;
+                        int newNumber;
+                        int numberBefore = 0;
 
-                if (round > 2) {
-                    numberBefore = codesBefore[0].charAt(i) - 48;
-                }
-
-                switch (difference.charAt(i)) {
-                    case '>':
-                        if (round == 2 || (round > 2 && numberBefore < currentNumber)) {
-                            newNumber = currentNumber + ((9 - currentNumber) / 2);
-
-                            if ((9 - currentNumber) % 2 == 0) {
-                                newNumber += 48;
-                            } else {
-                                newNumber += 49;
-                            }
-                        } else {
-                            newNumber = currentNumber + ((numberBefore - currentNumber) / 2);
-
-                            if ((numberBefore - currentNumber) % 2 == 0) {
-                                newNumber += 48;
-                            } else {
-                                newNumber += 49;
-                            }
+                        if (round > 2) {
+                            numberBefore = codesBefore[0].charAt(i) - 48;
                         }
 
-                        code.setCharAt(i, (char) newNumber);
+                        switch (difference.charAt(i)) {
+                            case '>':
+                                if (round == 2 || (round > 2 && numberBefore < currentNumber)) {
+                                    newNumber = currentNumber + ((9 - currentNumber) / 2);
 
-                        break;
-                    case '<':
-                        if (round == 2 || (round > 2 && numberBefore > currentNumber)) {
-                            newNumber = currentNumber - (currentNumber / 2);
+                                    if ((9 - currentNumber) % 2 == 0) {
+                                        newNumber += 48;
+                                    } else {
+                                        newNumber += 49;
+                                    }
+                                } else {
+                                    newNumber = currentNumber + ((numberBefore - currentNumber) / 2);
 
-                            if (currentNumber % 2 == 0) {
-                                newNumber += 48;
-                            } else {
-                                newNumber += 47;
-                            }
-                        } else {
-                            newNumber = currentNumber - ((currentNumber - numberBefore) / 2);
+                                    if ((numberBefore - currentNumber) % 2 == 0) {
+                                        newNumber += 48;
+                                    } else {
+                                        newNumber += 49;
+                                    }
+                                }
 
-                            if ((currentNumber - numberBefore) % 2 == 0) {
-                                newNumber += 48;
-                            } else {
-                                newNumber += 47;
-                            }
+                                code.setCharAt(i, (char) newNumber);
+
+                                break;
+                            case '<':
+                                if (round == 2 || (round > 2 && numberBefore > currentNumber)) {
+                                    newNumber = currentNumber - (currentNumber / 2);
+
+                                    if (currentNumber % 2 == 0) {
+                                        newNumber += 48;
+                                    } else {
+                                        newNumber += 47;
+                                    }
+                                } else {
+                                    newNumber = currentNumber - ((currentNumber - numberBefore) / 2);
+
+                                    if ((currentNumber - numberBefore) % 2 == 0) {
+                                        newNumber += 48;
+                                    } else {
+                                        newNumber += 47;
+                                    }
+                                }
+
+                                code.setCharAt(i, (char) newNumber);
+
+                                break;
+                            case '=':
+                                code.setCharAt(i, (char) (currentNumber + 48));
+
+                                break;
+                        }
+                    }
+
+                    break;
+                case "Mastermind":
+                    ArrayList<Integer> blNumbers = new ArrayList<>();
+                    ArrayList<String> codes = new ArrayList<>();
+                    ArrayList<String> responses = new ArrayList<>();
+
+                    codes.add(code.toString());
+                    responses.add(difference);
+
+                    if (difference.equals("00")) {
+                        for (int i = 0; i < mmLength; i++) {
+                            blNumbers.add(code.charAt(i) - 48);
                         }
 
-                        code.setCharAt(i, (char) newNumber);
+                        for (int i = 0; i < mmLength; i++) {
+                            int newNumber;
 
-                        break;
-                    case '=':
-                        code.setCharAt(i, (char) (currentNumber + 48));
+                            do {
+                                newNumber = random.nextInt(10);
+                            } while (blNumbers.contains(newNumber));
 
-                        break;
-                }
+                            code.setCharAt(i, (char) newNumber);
+                        }
+                    } else if (difference.equals("10")) {
+                        int keptNumberIndex = random.nextInt(mmLength);
+
+                        for (int i = 0; i < mmLength; i++) {
+                            
+
+                            if (i != keptNumberIndex) {
+
+                            }
+                        }
+                    } else if (difference.equals("01")) {
+
+                    }
+
+                    break;
             }
         }
 
@@ -226,13 +271,13 @@ public abstract class Mode {
      */
     protected String returnDifference() {
         String difference = "";
+        boolean containsFalse = false;
 
         switch (game) {
             case "HigherLower":
                 System.out.println("Tell now the computer the result of its proposition with (>, <, =) for each number.");
 
                 difference = scanner.next();
-                boolean containsFalse = false;
 
                 for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
 
@@ -245,6 +290,25 @@ public abstract class Mode {
                     difference = scanner.next();
 
                     for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
+                }
+
+                break;
+            case "Mastermind":
+                System.out.println("Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : \"12\"");
+
+                difference = scanner.next();
+
+                for (int i = 0; i < difference.length(); i++) containsFalse = (!("0123456789".contains(Character.toString(difference.charAt(i)))));
+
+                while (difference.length() != 2 || containsFalse) {
+                    if (difference.equalsIgnoreCase("stop")) stop();
+
+                    containsFalse = false;
+                    System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
+
+                    difference = scanner.next();
+
+                    for (int i = 0; i < difference.length(); i++) containsFalse = (!("0123456789".contains(Character.toString(difference.charAt(i)))));
                 }
 
                 break;

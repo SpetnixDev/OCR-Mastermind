@@ -5,8 +5,8 @@ import net.spetnix.project.Game;
 import java.util.Random;
 
 public class Duel extends Mode {
-    public Duel(int rounds, String game, Game g) {
-        super(rounds, game, g);
+    public Duel(String game, Game g) {
+        super(game, g);
     }
 
     /**
@@ -17,7 +17,7 @@ public class Duel extends Mode {
 
         System.out.println("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
-                "You'll have " + rounds + " rounds to find your opponent's code.\n");
+                "You'll have " + g.getRounds() + " rounds to find your opponent's code.\n");
 
         System.out.println("To start, enter the combination that the computer will have to guess: ");
 
@@ -29,7 +29,7 @@ public class Duel extends Mode {
         System.out.println("\nThe computer created its combination.");
 
         String userGuess;
-        String computerGuess = "";
+        String computerGuess;
 
         String difference = "";
 
@@ -40,7 +40,7 @@ public class Duel extends Mode {
 
         String[] computerGuesses = {"", ""};
 
-        while (round <= rounds) {
+        while (round <= g.getRounds()) {
             System.out.println("\nRound : " + round);
 
             if (userFound == 0) {
@@ -56,7 +56,7 @@ public class Duel extends Mode {
             }
 
             if (computerFound == 0) {
-                computerGuess = computerGuess(round, difference, computerGuesses);
+                computerGuess = computerGuess(round, difference, computerGuesses, game);
 
                 computerGuesses[0] = computerGuesses[1];
                 computerGuesses[1] = computerGuess;

@@ -17,7 +17,10 @@ import java.util.Scanner;
 public class Game {
     Scanner scanner = new Scanner(System.in);
 
-    int rounds = 8;
+    private int rounds;
+    private int higherLowerLength;
+    private int mastermindLength;
+    private int mastermindPossibilities;
 
     String game;
     int mode;
@@ -32,9 +35,7 @@ public class Game {
      * Runs the menu.
      */
     public void runMenu() {
-        int next = 0;
-
-        System.out.println("Welcome !");
+        Main.display("Welcome !");
 
         do {
             setGame();
@@ -54,15 +55,15 @@ public class Game {
     private void runMode(int mode, Game g) {
         switch (mode) {
             case 1:
-                new Challenger(rounds, game, g).run();
+                new Challenger(game, g).run();
 
                 break;
             case 2:
-                new Defender(rounds, game, g).run();
+                new Defender(game, g).run();
 
                 break;
             case 3:
-                new Duel(rounds, game, g).run();
+                new Duel(game, g).run();
 
                 break;
         }
@@ -76,9 +77,9 @@ public class Game {
     private void setGame() {
         String[] games = {"HigherLower", "Mastermind"};
 
-        System.out.println("\nWhich game do you wanna play ?");
+        Main.display("\nWhich game do you wanna play ?");
 
-        for (int i = 0; i < games.length; i++) System.out.println((i + 1) + " - " + games[i]);
+        for (int i = 0; i < games.length; i++) Main.display((i + 1) + " - " + games[i]);
 
         int gameIndex = 0;
         boolean gameError;
@@ -96,7 +97,7 @@ public class Game {
 
         game = games[gameIndex - 1];
 
-        System.out.println("You have chosen the following game : " + game + " !");
+        Main.display("You have chosen the following game : " + game + " !");
 
         scanner.nextLine();
 
@@ -112,9 +113,9 @@ public class Game {
     private void setMode() {
         String[] modes = {"Challenger", "Defender", "Duel", "Go back"};
 
-        System.out.println("\nWhich mode do you wanna play ?");
+        Main.display("\nWhich mode do you wanna play ?");
 
-        for (int i = 0; i < modes.length; i++) System.out.println((i + 1) + " - " + modes[i]);
+        for (int i = 0; i < modes.length; i++) Main.display((i + 1) + " - " + modes[i]);
 
         int modeIndex = 0;
         boolean modeError;
@@ -147,10 +148,10 @@ public class Game {
 
         do {
             try {
-                System.out.println("\nWhat do you wanna do ?");
-                System.out.println("1 - Replay");
-                System.out.println("2 - Play a different game");
-                System.out.println("3 - Quit game");
+                Main.display("\nWhat do you wanna do ?");
+                Main.display("1 - Replay");
+                Main.display("2 - Play a different game");
+                Main.display("3 - Quit game");
 
                 replay = scanner.nextInt();
 
@@ -168,6 +169,22 @@ public class Game {
         }
     }
 
+    public int getRounds() {
+        return rounds;
+    }
+
+    public int getHigherLowerLength() {
+        return higherLowerLength;
+    }
+
+    public int getMastermindLength() {
+        return mastermindLength;
+    }
+
+    public int getMastermindPossibilities() {
+        return mastermindPossibilities;
+    }
+
     private void getProperties() {
         //todo: Add file .properties and get config here
         final Properties prop = new Properties();
@@ -177,6 +194,11 @@ public class Game {
             input = new FileInputStream("src/config.properties");
 
             prop.load(input);
+
+            rounds = Integer.valueOf(prop.getProperty("rounds"));
+            higherLowerLength = Integer.valueOf(prop.getProperty("higherLowerLength"));
+            mastermindLength = Integer.valueOf(prop.getProperty("mastermindLength"));
+            mastermindPossibilities = Integer.valueOf(prop.getProperty("mastermindPossibilities"));
         } catch (final IOException ex) {
             ex.printStackTrace();
         } finally {
