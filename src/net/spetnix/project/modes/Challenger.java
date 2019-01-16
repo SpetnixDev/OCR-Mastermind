@@ -23,6 +23,7 @@ public class Challenger extends Mode {
         for (int i = 0; i < 4; i++) code += String.valueOf(random.nextInt(10));
 
         System.out.println("The computer created its combination.");
+        if (g.isDevMode()) System.out.println("Combination : " + code);
 
         int round = 1;
 

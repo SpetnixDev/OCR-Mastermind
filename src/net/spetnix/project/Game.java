@@ -22,6 +22,8 @@ public class Game {
     private int mastermindLength;
     private int mastermindPossibilities;
 
+    private boolean devMode = false;
+
     String game;
     int mode;
 
@@ -38,7 +40,7 @@ public class Game {
         Main.display("Welcome !");
 
         do {
-            setGame();
+            setDevMode();
 
             runEndMenu();
         } while (!stop);
@@ -67,6 +69,41 @@ public class Game {
 
                 break;
         }
+    }
+
+    /**
+     * Asks the user if they want to enable the Developer Mode.
+     */
+    private void setDevMode() {
+        Main.display("\nDo you wanna enable the Developer Mode ?");
+
+        int choice = 0;
+        boolean choiceError;
+
+        do {
+            try {
+                choice = scanner.nextInt();
+
+                choiceError = (choice != 0 && choice != 1);
+            } catch (InputMismatchException e) {
+                scanner.next();
+                choiceError = true;
+            }
+        } while (choiceError);
+
+        if (choice == 0) {
+            System.out.println("You have chosen not to enable the Developer Mode.");
+
+            setDevMode(false);
+        } else {
+            System.out.println("You have chosen to enable the Developer Mode.");
+
+            setDevMode(true);
+        }
+
+        scanner.nextLine();
+
+        setGame();
     }
 
     /**
@@ -167,6 +204,14 @@ public class Game {
         } else if (replay == 3) {
             stop = true;
         }
+    }
+
+    public boolean isDevMode() {
+        return devMode;
+    }
+
+    public void setDevMode(boolean devMode) {
+        devMode = devMode;
     }
 
     public int getRounds() {

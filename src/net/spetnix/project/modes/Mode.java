@@ -228,7 +228,7 @@ public abstract class Mode {
                         int keptNumberIndex = random.nextInt(mmLength);
 
                         for (int i = 0; i < mmLength; i++) {
-                            
+
 
                             if (i != keptNumberIndex) {
 
