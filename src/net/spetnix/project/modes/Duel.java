@@ -19,12 +19,19 @@ public class Duel extends Mode {
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
                 "You'll have " + g.getRounds() + " rounds to find your opponent's code.\n");
 
-        System.out.println("To start, enter the combination that the computer will have to guess: ");
-
-        String userCode = setupCode();
         String code = "";
 
-        for (int i = 0; i < 4; i++) code += String.valueOf(random.nextInt(10));
+        if (game.equals("HigherLower")) {
+            System.out.println("To start, enter the combination that the computer will have to guess: (" + g.getHigherLowerLength() + " numbers)");
+
+            for (int i = 0; i < g.getHigherLowerLength(); i++) code += String.valueOf(random.nextInt(10));
+        } else {
+            System.out.println("Please enter a combination with " + g.getMastermindLength() + " numbers : (" + g.getMastermindLength() + " numbers)");
+
+            for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(10));
+        }
+
+        String userCode = setupCode();
 
         System.out.println("\nThe computer created its combination.");
         if (g.isDevMode()) System.out.println("Combination : " + code);

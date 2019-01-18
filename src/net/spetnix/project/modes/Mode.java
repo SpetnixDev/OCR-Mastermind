@@ -3,24 +3,34 @@ package net.spetnix.project.modes;
 import net.spetnix.project.Game;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
 public abstract class Mode {
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     protected String game;
     Game g;
 
+    private int hlLength;
+    private int mmLength;
+
+    private int mmPossibilities;
+
+    private ArrayList<String> possibleCombinations;
+
     Mode(String game, Game g) {
         this.game = game;
         this.g = g;
+
+        hlLength = g.getHigherLowerLength();
+        mmLength = g.getMastermindLength();
+
+        mmPossibilities = g.getMastermindPossibilities();
+
+        possibleCombinations = createCombinations();
     }
-
-    int hlLength = g.getHigherLowerLength();
-    int mmLength = g.getMastermindLength();
-
-    int mmPossibilities = g.getMastermindPossibilities();
 
     /**
      * Starts the current Mode.
@@ -33,16 +43,24 @@ public abstract class Mode {
      * @return The new guess of the user.
      */
     protected String userGuess() {
-        System.out.println("\nEnter a combination with 4 numbers :");
+        int length;
+
+        if (game.equals("HigherLower")) {
+            length = hlLength;
+        } else {
+            length = mmLength;
+        }
+
+        System.out.println("\nEnter a combination with " + length + " numbers :");
 
         String userCode;
 
         userCode = scanner.next();
 
-        while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
+        while (userCode.length() != length || !userCode.matches("[0-9]+")) {
             if (userCode.equalsIgnoreCase("stop")) stop();
 
-            System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
+            System.out.println("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
 
             userCode = scanner.next();
         }
@@ -64,7 +82,7 @@ public abstract class Mode {
 
         switch (game) {
             case "HigherLower":
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < hlLength; i++) {
                     int number = code.charAt(i);
                     int userNumber = userCode.charAt(i);
 
@@ -81,8 +99,8 @@ public abstract class Mode {
             case "Mastermind":
                 ArrayList<Integer> checked = new ArrayList<>();
 
-                for (int i = 0; i < 4; i ++) {
-                    for (int j = 0; j < 4; j ++) {
+                for (int i = 0; i < mmLength; i ++) {
+                    for (int j = 0; j < mmLength; j ++) {
                        if (checked.contains(j)) continue;
 
                        if (code.charAt(j) == userCode.charAt(i)) {
@@ -95,7 +113,7 @@ public abstract class Mode {
 
                 int wellPlaced = 0;
 
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < mmLength; i++) {
                     int number = code.charAt(i);
                     int userNumber = userCode.charAt(i);
 
@@ -132,7 +150,11 @@ public abstract class Mode {
         StringBuilder code = new StringBuilder();
 
         if (round == 1) {
-            for (int i = 0; i < 4; i++) code.append(random.nextInt(10));
+            if (game.equalsIgnoreCase("HigherLower")) {
+                for (int i = 0; i < hlLength; i++) code.append(random.nextInt(10));
+            } else {
+                for (int i = 0; i < mmLength; i++) code.append(random.nextInt(10));
+            }
         } else {
             code = new StringBuilder(codesBefore[1]);
 
@@ -203,40 +225,82 @@ public abstract class Mode {
 
                     break;
                 case "Mastermind":
-                    ArrayList<Integer> blNumbers = new ArrayList<>();
-                    ArrayList<String> codes = new ArrayList<>();
-                    ArrayList<String> responses = new ArrayList<>();
-
-                    codes.add(code.toString());
-                    responses.add(difference);
+                    possibleCombinations.remove(code.toString());
 
                     if (difference.equals("00")) {
-                        for (int i = 0; i < mmLength; i++) {
-                            blNumbers.add(code.charAt(i) - 48);
-                        }
-
-                        for (int i = 0; i < mmLength; i++) {
-                            int newNumber;
-
-                            do {
-                                newNumber = random.nextInt(10);
-                            } while (blNumbers.contains(newNumber));
-
-                            code.setCharAt(i, (char) newNumber);
-                        }
-                    } else if (difference.equals("10")) {
-                        int keptNumberIndex = random.nextInt(mmLength);
-
-                        for (int i = 0; i < mmLength; i++) {
-
-
-                            if (i != keptNumberIndex) {
-
+                        for (int i = 0; i < code.length(); i++) {
+                            for (int j = 0; j < possibleCombinations.size(); j++) {
+                                if (possibleCombinations.get(j).contains(String.valueOf(code.charAt(i)))) {
+                                    possibleCombinations.remove(j);
+                                    j--;
+                                }
                             }
                         }
-                    } else if (difference.equals("01")) {
+                    } else if (difference.charAt(0) == '0') {
+                        for (int i = 0; i < code.length(); i++) {
+                            for (int j = 0; j < possibleCombinations.size(); j++) {
+                                if (possibleCombinations.get(j).charAt(i) == code.charAt(i)) {
+                                    possibleCombinations.remove(j);
+                                    j--;
+                                }
+                            }
+                        }
+                    } else if (difference.charAt(1) == '0') {
+                        int a = 0;
+                        int wellPlaced = difference.charAt(0) - 48;
 
+                        for (int i = 0; i < possibleCombinations.size(); i++) {
+                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
+                                if (code.charAt(j) == possibleCombinations.get(i).charAt(j)) {
+                                    a++;
+                                }
+                            }
+
+                            if (a < wellPlaced) {
+                                possibleCombinations.remove(i);
+                                i--;
+                            }
+
+                            a = 0;
+                        }
+                    } else {
+                        int wellPlaced = difference.charAt(0) - 48;
+                        int misplaced = difference.charAt(1) - 48;
+
+                        int correctNumbers = wellPlaced + misplaced;
+                        HashMap<Integer, Integer> checkedIndexes = new HashMap<>();
+
+                        for (int i = 0; i < possibleCombinations.size(); i++) {
+                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
+                                if (code.charAt(j) == possibleCombinations.get(i).charAt(j)) {
+                                    checkedIndexes.put(j, j);
+                                }
+                            }
+
+                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
+                                for (int k = 0; k < code.length(); k++) {
+                                    if (!checkedIndexes.containsKey(j)) {
+                                        if (!checkedIndexes.containsValue(k)) {
+                                            if (possibleCombinations.get(i).charAt(j) == code.charAt(k)) {
+                                                checkedIndexes.put(j, k);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (checkedIndexes.size() < correctNumbers) {
+                                possibleCombinations.remove(i);
+                                i--;
+                            }
+
+                            checkedIndexes.clear();
+                        }
                     }
+
+                    int index = random.nextInt(possibleCombinations.size());
+
+                    code = new StringBuilder(possibleCombinations.get(index));
 
                     break;
             }
@@ -251,12 +315,20 @@ public abstract class Mode {
      * @return The combination created by the user.
      */
     protected String setupCode() {
+        int length;
+
+        if (game.equals("HigherLower")) {
+            length = hlLength;
+        } else {
+            length = mmLength;
+        }
+
         String userCode = scanner.next();
 
-        while (userCode.length() != 4 || !userCode.matches("[0-9]+")) {
+        while (userCode.length() != length || !userCode.matches("[0-9]+")) {
             if (userCode.equalsIgnoreCase("stop")) stop();
 
-            System.out.println("You didn't respect the rule. Enter a valid combination with 4 numbers :");
+            System.out.println("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
 
             userCode = scanner.next();
         }
@@ -281,7 +353,7 @@ public abstract class Mode {
 
                 for (int i = 0; i < difference.length(); i++) containsFalse = (!("<>=".contains(Character.toString(difference.charAt(i)))));
 
-                while (difference.length() != 4 || containsFalse) {
+                while (difference.length() != hlLength || containsFalse) {
                     if (difference.equalsIgnoreCase("stop")) stop();
 
                     containsFalse = false;
@@ -315,6 +387,24 @@ public abstract class Mode {
         }
 
         return difference;
+    }
+
+    protected ArrayList<String> createCombinations() {
+        ArrayList<String> combinations = new ArrayList<>();
+
+        for (int i = 0; i < Math.pow(10, mmLength); i++) {
+            String number = String.valueOf(i);
+
+            int a = mmLength - number.length();
+
+            for (int j = 0; j < a; j++) {
+                number = "0" + number;
+            }
+
+            combinations.add(number);
+        }
+
+        return combinations;
     }
 
     /**

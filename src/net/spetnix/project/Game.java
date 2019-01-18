@@ -40,6 +40,8 @@ public class Game {
         Main.display("Welcome !");
 
         do {
+            System.out.println(this);
+
             setDevMode();
 
             runEndMenu();

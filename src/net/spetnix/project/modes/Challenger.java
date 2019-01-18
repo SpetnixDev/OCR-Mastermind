@@ -20,7 +20,11 @@ public class Challenger extends Mode {
         String code = "";
         String userCode;
 
-        for (int i = 0; i < 4; i++) code += String.valueOf(random.nextInt(10));
+        if (game.equals("HigherLower")) {
+            for (int i = 0; i < g.getHigherLowerLength(); i++) code += String.valueOf(random.nextInt(10));
+        } else {
+            for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(10));
+        }
 
         System.out.println("The computer created its combination.");
         if (g.isDevMode()) System.out.println("Combination : " + code);
