@@ -43,8 +43,6 @@ public class Game {
             System.out.println(this);
 
             setDevMode();
-
-            runEndMenu();
         } while (!stop);
     }
 
@@ -71,6 +69,8 @@ public class Game {
 
                 break;
         }
+
+        runEndMenu();
     }
 
     /**

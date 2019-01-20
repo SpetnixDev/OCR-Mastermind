@@ -2,6 +2,7 @@ package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -245,6 +246,29 @@ public abstract class Mode {
                                 }
                             }
                         }
+
+                        HashMap<Integer, Integer> checkedIndexes = new HashMap<>();
+
+                        for (int i = 0; i < possibleCombinations.size(); i++) {
+                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
+                                for (int k = 0; k < code.length(); k++) {
+                                    if (!checkedIndexes.containsKey(j)) {
+                                        if (!checkedIndexes.containsValue(k)) {
+                                            if (possibleCombinations.get(i).charAt(j) == code.charAt(k)) {
+                                                checkedIndexes.put(j, k);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            int misplaced = difference.charAt(1) - 48;
+
+                            if (checkedIndexes.size() < misplaced) {
+                                possibleCombinations.remove(i);
+                                i--;
+                            }
+                        }
                     } else if (difference.charAt(1) == '0') {
                         int a = 0;
                         int wellPlaced = difference.charAt(0) - 48;
@@ -256,7 +280,7 @@ public abstract class Mode {
                                 }
                             }
 
-                            if (a < wellPlaced) {
+                            if (a != wellPlaced) {
                                 possibleCombinations.remove(i);
                                 i--;
                             }
@@ -301,6 +325,8 @@ public abstract class Mode {
                     int index = random.nextInt(possibleCombinations.size());
 
                     code = new StringBuilder(possibleCombinations.get(index));
+
+                    System.out.println(possibleCombinations.size() + " " + possibleCombinations.contains("124487"));
 
                     break;
             }
