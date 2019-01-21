@@ -15,6 +15,8 @@ public class Challenger extends Mode {
     public void run() {
         Random random = new Random();
 
+        System.out.println(g.isDevMode());
+
         System.out.println("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + g.getRounds() + " rounds to find it.");
 
         String code = "";

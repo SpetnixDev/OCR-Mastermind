@@ -78,6 +78,8 @@ public class Game {
      */
     private void setDevMode() {
         Main.display("\nDo you wanna enable the Developer Mode ?");
+        Main.display("0 - No");
+        Main.display("1 - Yes");
 
         int choice = 0;
         boolean choiceError;
@@ -213,7 +215,7 @@ public class Game {
     }
 
     public void setDevMode(boolean devMode) {
-        devMode = devMode;
+        this.devMode = devMode;
     }
 
     public int getRounds() {

@@ -722,3 +722,35 @@ What do you wanna do ?
 2019-01-18 21:43:14 INFO  Main:16 - 1 - Replay
 2019-01-18 21:43:14 INFO  Main:16 - 2 - Play a different game
 2019-01-18 21:43:14 INFO  Main:16 - 3 - Quit game
+2019-01-21 17:23:54 INFO  Main:16 - Welcome !
+2019-01-21 17:23:54 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-21 17:23:54 INFO  Main:16 - 0 - No
+2019-01-21 17:23:54 INFO  Main:16 - 1 - Yes
+2019-01-21 17:24:00 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-21 17:24:00 INFO  Main:16 - 1 - HigherLower
+2019-01-21 17:24:00 INFO  Main:16 - 2 - Mastermind
+2019-01-21 17:24:02 INFO  Main:16 - You have chosen the following game : HigherLower !
+2019-01-21 17:24:02 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-21 17:24:02 INFO  Main:16 - 1 - Challenger
+2019-01-21 17:24:02 INFO  Main:16 - 2 - Defender
+2019-01-21 17:24:02 INFO  Main:16 - 3 - Duel
+2019-01-21 17:24:02 INFO  Main:16 - 4 - Go back
+2019-01-21 17:25:39 INFO  Main:16 - Welcome !
+2019-01-21 17:25:39 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-21 17:25:39 INFO  Main:16 - 0 - No
+2019-01-21 17:25:39 INFO  Main:16 - 1 - Yes
+2019-01-21 17:25:41 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-21 17:25:41 INFO  Main:16 - 1 - HigherLower
+2019-01-21 17:25:41 INFO  Main:16 - 2 - Mastermind
+2019-01-21 17:25:42 INFO  Main:16 - You have chosen the following game : HigherLower !
+2019-01-21 17:25:42 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-21 17:25:42 INFO  Main:16 - 1 - Challenger
+2019-01-21 17:25:42 INFO  Main:16 - 2 - Defender
+2019-01-21 17:25:42 INFO  Main:16 - 3 - Duel
+2019-01-21 17:25:42 INFO  Main:16 - 4 - Go back
