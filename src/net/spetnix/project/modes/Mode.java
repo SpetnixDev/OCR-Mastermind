@@ -322,9 +322,14 @@ public abstract class Mode {
                         }
                     }
 
-                    int index = random.nextInt(possibleCombinations.size());
+                    try {
+                        int index = random.nextInt(possibleCombinations.size());
 
-                    code = new StringBuilder(possibleCombinations.get(index));
+                        code = new StringBuilder(possibleCombinations.get(index));
+                    } catch (IllegalArgumentException e) {
+                        Main.display("The computer couldn't find any combination which matches with the responses you gave. You might have done a mistake ! End of the game.");
+                        stop();
+                    }
 
                     break;
             }
