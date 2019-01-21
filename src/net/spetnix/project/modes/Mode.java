@@ -2,7 +2,6 @@ package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -17,7 +16,7 @@ public abstract class Mode {
     private int hlLength;
     private int mmLength;
 
-    private int mmPossibilities;
+    //private int mmPossibilities;
 
     private ArrayList<String> possibleCombinations;
 
@@ -28,7 +27,7 @@ public abstract class Mode {
         hlLength = g.getHigherLowerLength();
         mmLength = g.getMastermindLength();
 
-        mmPossibilities = g.getMastermindPossibilities();
+        //mmPossibilities = g.getMastermindPossibilities();
 
         possibleCombinations = createCombinations();
     }
@@ -325,8 +324,6 @@ public abstract class Mode {
                     int index = random.nextInt(possibleCombinations.size());
 
                     code = new StringBuilder(possibleCombinations.get(index));
-
-                    System.out.println(possibleCombinations.size() + " " + possibleCombinations.contains("124487"));
 
                     break;
             }
