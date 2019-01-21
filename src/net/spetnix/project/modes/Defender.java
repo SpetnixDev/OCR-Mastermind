@@ -1,6 +1,8 @@
 package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
+import net.spetnix.project.Main;
+
 public class Defender extends Mode {
     public Defender(String game, Game g) {
         super(game, g);
@@ -10,13 +12,13 @@ public class Defender extends Mode {
      * Starts the Defender Mode.
      */
     public void run() {
-        System.out.println("\nWelcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
+        Main.display("\nWelcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
                 " The computer will have " + g.getRounds() + " rounds to find it.");
 
         if (game.equals("HigherLower")) {
-            System.out.println("Please enter a combination with " + g.getHigherLowerLength() + " numbers :");
+            Main.display("Please enter a combination with " + g.getHigherLowerLength() + " numbers :");
         } else {
-            System.out.println("Please enter a combination with " + g.getMastermindLength() + " numbers :");
+            Main.display("Please enter a combination with " + g.getMastermindLength() + " numbers :");
         }
 
         String userCode = setupCode();
@@ -28,17 +30,17 @@ public class Defender extends Mode {
         String[] codes = {"", ""};
 
         while (round <= g.getRounds()) {
-            System.out.println("Round : " + round);
+            Main.display("Round : " + round);
 
             code = computerGuess(round, difference, codes, game);
 
             codes[0] = codes[1];
             codes[1] = code;
 
-            System.out.println("Computer's proposition : " + code);
+            Main.display("Computer's proposition : " + code);
 
             if (code.equalsIgnoreCase(userCode)) {
-                System.out.println("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
+                Main.display("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
 
                 return;
             } else {
@@ -48,6 +50,6 @@ public class Defender extends Mode {
             round++;
         }
 
-        System.out.println("Sadly, the computer didn't find the combination which was : " + userCode);
+        Main.display("Sadly, the computer didn't find the combination which was : " + userCode);
     }
 }

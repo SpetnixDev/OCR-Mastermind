@@ -40,8 +40,6 @@ public class Game {
         Main.display("Welcome !");
 
         do {
-            System.out.println(this);
-
             setDevMode();
         } while (!stop);
     }
@@ -96,11 +94,11 @@ public class Game {
         } while (choiceError);
 
         if (choice == 0) {
-            System.out.println("You have chosen not to enable the Developer Mode.");
+            Main.display("You have chosen not to enable the Developer Mode.");
 
             setDevMode(false);
         } else {
-            System.out.println("You have chosen to enable the Developer Mode.");
+            Main.display("You have chosen to enable the Developer Mode.");
 
             setDevMode(true);
         }

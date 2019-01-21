@@ -1,6 +1,7 @@
 package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
+import net.spetnix.project.Main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,7 +52,7 @@ public abstract class Mode {
             length = mmLength;
         }
 
-        System.out.println("\nEnter a combination with " + length + " numbers :");
+        Main.display("\nEnter a combination with " + length + " numbers :");
 
         String userCode;
 
@@ -60,7 +61,7 @@ public abstract class Mode {
         while (userCode.length() != length || !userCode.matches("[0-9]+")) {
             if (userCode.equalsIgnoreCase("stop")) stop();
 
-            System.out.println("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
+            Main.display("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
 
             userCode = scanner.next();
         }
@@ -351,7 +352,7 @@ public abstract class Mode {
         while (userCode.length() != length || !userCode.matches("[0-9]+")) {
             if (userCode.equalsIgnoreCase("stop")) stop();
 
-            System.out.println("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
+            Main.display("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
 
             userCode = scanner.next();
         }
@@ -370,7 +371,7 @@ public abstract class Mode {
 
         switch (game) {
             case "HigherLower":
-                System.out.println("Tell now the computer the result of its proposition with (>, <, =) for each number.");
+                Main.display("Tell now the computer the result of its proposition with (>, <, =) for each number.");
 
                 difference = scanner.next();
 
@@ -380,7 +381,7 @@ public abstract class Mode {
                     if (difference.equalsIgnoreCase("stop")) stop();
 
                     containsFalse = false;
-                    System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
+                    Main.display("You didn't respect the rule. Enter a valid answer for the computer :");
 
                     difference = scanner.next();
 
@@ -389,7 +390,7 @@ public abstract class Mode {
 
                 break;
             case "Mastermind":
-                System.out.println("Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : \"12\"");
+                Main.display("Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : \"12\"");
 
                 difference = scanner.next();
 
@@ -399,7 +400,7 @@ public abstract class Mode {
                     if (difference.equalsIgnoreCase("stop")) stop();
 
                     containsFalse = false;
-                    System.out.println("You didn't respect the rule. Enter a valid answer for the computer :");
+                    Main.display("You didn't respect the rule. Enter a valid answer for the computer :");
 
                     difference = scanner.next();
 
@@ -434,7 +435,7 @@ public abstract class Mode {
      * Stops the game and returns to the menu.
      */
     private void stop() {
-        System.out.println(" ");
+        Main.display(" ");
 
         g.runMenu();
     }

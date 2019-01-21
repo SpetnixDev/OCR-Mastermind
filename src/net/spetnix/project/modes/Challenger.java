@@ -1,6 +1,7 @@
 package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
+import net.spetnix.project.Main;
 
 import java.util.Random;
 
@@ -15,9 +16,7 @@ public class Challenger extends Mode {
     public void run() {
         Random random = new Random();
 
-        System.out.println(g.isDevMode());
-
-        System.out.println("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + g.getRounds() + " rounds to find it.");
+        Main.display("\nWelcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have " + g.getRounds() + " rounds to find it.");
 
         String code = "";
         String userCode;
@@ -28,27 +27,27 @@ public class Challenger extends Mode {
             for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(10));
         }
 
-        System.out.println("The computer created its combination.");
-        if (g.isDevMode()) System.out.println("Combination : " + code);
+        Main.display("The computer created its combination.");
+        if (g.isDevMode()) Main.display("Combination : " + code);
 
         int round = 1;
 
         while (round <= g.getRounds()) {
-            System.out.println("\nRound : " + round);
+            Main.display("\nRound : " + round);
 
             userCode = userGuess();
 
             if (code.equalsIgnoreCase(userCode)) {
-                System.out.println("Congratulations, you found the combination ! You found it in " + round + ((round == 1) ? " round !" : " rounds !"));
+                Main.display("Congratulations, you found the combination ! You found it in " + round + ((round == 1) ? " round !" : " rounds !"));
 
                 return;
             } else {
-                System.out.println("Proposition : " + userCode + " --> " + compareCodes(code, userCode, game));
+                Main.display("Proposition : " + userCode + " --> " + compareCodes(code, userCode, game));
             }
 
             round++;
         }
 
-        System.out.println("Sadly, you didn't find the combination which was : " + code);
+        Main.display("Sadly, you didn't find the combination which was : " + code);
     }
 }

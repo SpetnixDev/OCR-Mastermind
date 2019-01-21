@@ -1,6 +1,7 @@
 package net.spetnix.project.modes;
 
 import net.spetnix.project.Game;
+import net.spetnix.project.Main;
 
 import java.util.Random;
 
@@ -15,26 +16,26 @@ public class Duel extends Mode {
     public void run() {
         Random random = new Random();
 
-        System.out.println("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
+        Main.display("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
                 "You'll have " + g.getRounds() + " rounds to find your opponent's code.\n");
 
         String code = "";
 
         if (game.equals("HigherLower")) {
-            System.out.println("To start, enter the combination that the computer will have to guess: (" + g.getHigherLowerLength() + " numbers)");
+            Main.display("To start, enter the combination that the computer will have to guess: (" + g.getHigherLowerLength() + " numbers)");
 
             for (int i = 0; i < g.getHigherLowerLength(); i++) code += String.valueOf(random.nextInt(10));
         } else {
-            System.out.println("Please enter a combination with " + g.getMastermindLength() + " numbers : (" + g.getMastermindLength() + " numbers)");
+            Main.display("Please enter a combination with " + g.getMastermindLength() + " numbers : (" + g.getMastermindLength() + " numbers)");
 
             for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(10));
         }
 
         String userCode = setupCode();
 
-        System.out.println("\nThe computer created its combination.");
-        if (g.isDevMode()) System.out.println("Combination : " + code);
+        Main.display("\nThe computer created its combination.");
+        if (g.isDevMode()) Main.display("Combination : " + code);
 
         String userGuess;
         String computerGuess;
@@ -49,17 +50,17 @@ public class Duel extends Mode {
         String[] computerGuesses = {"", ""};
 
         while (round <= g.getRounds()) {
-            System.out.println("\nRound : " + round);
+            Main.display("\nRound : " + round);
 
             if (userFound == 0) {
                 userGuess = userGuess();
 
                 if (userGuess.equalsIgnoreCase(code)) {
-                    System.out.println("Congratulations, you found the combination ! You found it in " + round + ((round == 1) ? " round !" : " rounds !"));
+                    Main.display("Congratulations, you found the combination ! You found it in " + round + ((round == 1) ? " round !" : " rounds !"));
 
                     userFound = round;
                 } else {
-                    System.out.println("Proposition : " + userGuess + " --> " + compareCodes(code, userGuess, game));
+                    Main.display("Proposition : " + userGuess + " --> " + compareCodes(code, userGuess, game));
                 }
             }
 
@@ -69,10 +70,10 @@ public class Duel extends Mode {
                 computerGuesses[0] = computerGuesses[1];
                 computerGuesses[1] = computerGuess;
 
-                System.out.println("\nComputer's proposition : " + computerGuess);
+                Main.display("\nComputer's proposition : " + computerGuess);
 
                 if (computerGuess.equalsIgnoreCase(userCode)) {
-                    System.out.println("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
+                    Main.display("The computer has found your combination in " + round + ((round == 1) ? " round !" : " rounds !"));
 
                     computerFound = round;
                 } else {
@@ -99,28 +100,28 @@ public class Duel extends Mode {
      * @param userFound The number of rounds the user took to find the combination.
      */
     private void printResults(String code, String userCode, int computerFound, int userFound) {
-        System.out.println("\n- Results : \n");
+        Main.display("\n- Results : \n");
 
         if (userFound > 0) {
-            System.out.println("You found the combination in : " + userFound + " rounds.");
+            Main.display("You found the combination in : " + userFound + " rounds.");
         } else {
-            System.out.println("Sadly, you didn't find the combination which was : " + code);
+            Main.display("Sadly, you didn't find the combination which was : " + code);
         }
 
         if (computerFound > 0) {
-            System.out.println("The computer found the combination in : " + computerFound + " rounds.");
+            Main.display("The computer found the combination in : " + computerFound + " rounds.");
         } else {
-            System.out.println("Sadly, the computer didn't find the combination which was : " + userCode);
+            Main.display("Sadly, the computer didn't find the combination which was : " + userCode);
         }
 
-        System.out.println(" ");
+        Main.display(" ");
 
         if ((userFound != 0 && userFound < computerFound) || (userFound != 0 && computerFound == 0)) {
-            System.out.println("You WON !");
+            Main.display("You WON !");
         } else if ((computerFound != 0 && computerFound < userFound) || (computerFound != 0 && userFound == 0)) {
-            System.out.println("The computer WON !");
+            Main.display("The computer WON !");
         } else {
-            System.out.println("That's a DRAW !");
+            Main.display("That's a DRAW !");
         }
     }
 }
