@@ -1427,3 +1427,114 @@ What do you wanna do ?
 2019-01-23 03:13:50 INFO  Main:16 - 1 - Replay
 2019-01-23 03:13:50 INFO  Main:16 - 2 - Play a different game
 2019-01-23 03:13:50 INFO  Main:16 - 3 - Quit game
+2019-01-23 03:43:44 INFO  Main:16 - Welcome !
+2019-01-23 03:43:44 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:43:44 INFO  Main:16 - 0 - No
+2019-01-23 03:43:44 INFO  Main:16 - 1 - Yes
+2019-01-23 03:43:47 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 03:43:47 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:43:47 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:43:47 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:43:53 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:43:53 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:43:53 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:43:53 INFO  Main:16 - 2 - Defender
+2019-01-23 03:43:53 INFO  Main:16 - 3 - Duel
+2019-01-23 03:43:53 INFO  Main:16 - 4 - Go back
+2019-01-23 03:43:56 INFO  Main:16 - 
+Welcome in the Duel mode : both Challenger and Defender are played in this mode.
+Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.
+You'll have 12 rounds to find your opponent's code.
+
+2019-01-23 03:43:56 INFO  Main:16 - Please enter a combination with 5 numbers : (5 numbers)
+2019-01-23 03:44:01 INFO  Main:16 - You didn't respect the rule. Enter a valid combination with 5 numbers :
+2019-01-23 03:44:04 INFO  Main:16 - 
+The computer created its combination.
+2019-01-23 03:44:04 INFO  Main:16 - 
+Round : 1
+2019-01-23 03:44:04 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:44:11 INFO  Main:16 - Proposition : 01234 --> - 4 misplaced
+2019-01-23 03:44:11 INFO  Main:16 - 
+Computer's proposition : 42410
+2019-01-23 03:44:11 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:44:23 INFO  Main:16 - 
+Round : 2
+2019-01-23 03:44:23 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:44:33 INFO  Main:16 - Proposition : 43211 --> - 3 misplaced
+2019-01-23 03:44:33 INFO  Main:16 - 
+Computer's proposition : 14041
+2019-01-23 03:44:33 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:45:01 INFO  Main:16 - 
+Round : 3
+2019-01-23 03:45:01 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:45:08 INFO  Main:16 - Proposition : 42104 --> - 1 well placed - 2 misplaced
+2019-01-23 03:45:08 INFO  Main:16 - 
+Computer's proposition : 01124
+2019-01-23 03:45:08 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:45:19 INFO  Main:16 - 
+Round : 4
+2019-01-23 03:45:19 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:45:54 INFO  Main:16 - Proposition : 12030 --> - 2 well placed - 1 misplaced
+2019-01-23 03:45:54 INFO  Main:16 - 
+Computer's proposition : 01234
+2019-01-23 03:45:54 INFO  Main:16 - The computer has found your combination in 4 rounds !
+2019-01-23 03:45:54 INFO  Main:16 - 
+Round : 5
+2019-01-23 03:45:54 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:05 INFO  Main:16 - Proposition : 00000 --> - 1 well placed 
+2019-01-23 03:46:05 INFO  Main:16 - 
+Round : 6
+2019-01-23 03:46:05 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:08 INFO  Main:16 - Proposition : 11111 --> No matches
+2019-01-23 03:46:08 INFO  Main:16 - 
+Round : 7
+2019-01-23 03:46:08 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:11 INFO  Main:16 - Proposition : 22222 --> - 2 well placed 
+2019-01-23 03:46:11 INFO  Main:16 - 
+Round : 8
+2019-01-23 03:46:11 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:13 INFO  Main:16 - Proposition : 33333 --> - 1 well placed 
+2019-01-23 03:46:13 INFO  Main:16 - 
+Round : 9
+2019-01-23 03:46:13 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:15 INFO  Main:16 - You didn't respect the rule. Enter a valid combination with 5 numbers :
+2019-01-23 03:46:16 INFO  Main:16 - Proposition : 44444 --> - 1 well placed 
+2019-01-23 03:46:16 INFO  Main:16 - 
+Round : 10
+2019-01-23 03:46:16 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:31 INFO  Main:16 - Proposition : 02423 --> - 1 well placed - 4 misplaced
+2019-01-23 03:46:31 INFO  Main:16 - 
+Round : 11
+2019-01-23 03:46:31 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:39 INFO  Main:16 - Proposition : 20432 --> - 1 well placed - 4 misplaced
+2019-01-23 03:46:39 INFO  Main:16 - 
+Round : 12
+2019-01-23 03:46:39 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:46:55 INFO  Main:16 - Proposition : 34022 --> - 3 well placed - 2 misplaced
+2019-01-23 03:46:55 INFO  Main:16 - 
+- Results : 
+
+2019-01-23 03:46:55 INFO  Main:16 - Sadly, you didn't find the combination which was : 32042
+2019-01-23 03:46:55 INFO  Main:16 - The computer found the combination in : 4 rounds.
+2019-01-23 03:46:55 INFO  Main:16 -  
+2019-01-23 03:46:55 INFO  Main:16 - The computer WON !
+2019-01-23 03:46:55 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 03:46:55 INFO  Main:16 - 1 - Replay
+2019-01-23 03:46:55 INFO  Main:16 - 2 - Play a different game
+2019-01-23 03:46:55 INFO  Main:16 - 3 - Quit game

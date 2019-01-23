@@ -256,7 +256,11 @@ public class Game {
         return mastermindLength;
     }
 
-
+    /**
+     * Tells the maximum different numbers that can be used for a combination in a Mastermind game.
+     *
+     * @return the amount of different numbers.
+     */
     public int getMastermindPossibilities() {
         return mastermindPossibilities;
     }
