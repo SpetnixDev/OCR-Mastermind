@@ -181,6 +181,9 @@ public class Game {
         }
     }
 
+    /**
+     * Asks the user what they want to do at the end of the game.
+     */
     private void runEndMenu() {
         int replay = 0;
         boolean replayError;
@@ -208,32 +211,60 @@ public class Game {
         }
     }
 
+    /**
+     * Tells if the Developer Mode is enabled or not.
+     *
+     * @return true if the Developer Mode is enabled.
+     */
     public boolean isDevMode() {
         return devMode;
     }
 
+    /**
+     * Enables or not the Developer Mode.
+     *
+     * @param devMode true if the Developer Mode has to be enabled.
+     */
     public void setDevMode(boolean devMode) {
         this.devMode = devMode;
     }
 
+    /**
+     * Tells the number of rounds that have to be played per game.
+     *
+     * @return the number of rounds.
+     */
     public int getRounds() {
         return rounds;
     }
 
+    /**
+     * Tells the length of the combination for the HigherLower game.
+     *
+     * @return the length of the combination.
+     */
     public int getHigherLowerLength() {
         return higherLowerLength;
     }
 
+    /**
+     * Tells the length of the combination for the Mastermind game.
+     *
+     * @return the length of the combination.
+     */
     public int getMastermindLength() {
         return mastermindLength;
     }
+
 
     public int getMastermindPossibilities() {
         return mastermindPossibilities;
     }
 
+    /**
+     * Gets properties from config.properties and implements them.
+     */
     private void getProperties() {
-        //todo: Add file .properties and get config here
         final Properties prop = new Properties();
         InputStream input = null;
 

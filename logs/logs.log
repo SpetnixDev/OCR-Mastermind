@@ -775,3 +775,655 @@ What do you wanna do ?
 2019-01-21 17:26:44 INFO  Main:16 - 1 - Replay
 2019-01-21 17:26:44 INFO  Main:16 - 2 - Play a different game
 2019-01-21 17:26:44 INFO  Main:16 - 3 - Quit game
+2019-01-21 17:56:49 INFO  Main:16 - Welcome !
+2019-01-21 17:56:49 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-21 17:56:49 INFO  Main:16 - 0 - No
+2019-01-21 17:56:49 INFO  Main:16 - 1 - Yes
+2019-01-21 17:56:51 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-21 17:56:51 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-21 17:56:51 INFO  Main:16 - 1 - HigherLower
+2019-01-21 17:56:51 INFO  Main:16 - 2 - Mastermind
+2019-01-21 17:56:53 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-21 17:56:53 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-21 17:56:53 INFO  Main:16 - 1 - Challenger
+2019-01-21 17:56:53 INFO  Main:16 - 2 - Defender
+2019-01-21 17:56:53 INFO  Main:16 - 3 - Duel
+2019-01-21 17:56:53 INFO  Main:16 - 4 - Go back
+2019-01-21 17:56:53 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-21 17:56:53 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-21 17:56:57 INFO  Main:16 - Round : 1
+2019-01-21 17:56:57 INFO  Main:16 - Computer's proposition : 08278
+2019-01-21 17:56:57 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-21 17:56:59 INFO  Main:16 - Round : 2
+2019-01-21 17:56:59 INFO  Main:16 - Computer's proposition : 13391
+2019-01-21 17:56:59 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-21 17:57:02 INFO  Main:16 - Round : 3
+2019-01-21 17:57:02 INFO  Main:16 - Computer's proposition : 56644
+2019-01-21 17:57:02 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-21 17:57:03 INFO  Main:16 - Round : 4
+2019-01-21 17:57:03 INFO  Main:16 - The computer can't find any combination which matches with the responses you gave. You might have done a mistake ! End of the game.
+2019-01-21 17:57:03 INFO  Main:16 -  
+2019-01-21 17:57:03 INFO  Main:16 - Welcome !
+2019-01-21 17:57:03 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-21 17:57:03 INFO  Main:16 - 0 - No
+2019-01-21 17:57:03 INFO  Main:16 - 1 - Yes
+2019-01-22 04:14:32 INFO  Main:21 - Welcome !
+2019-01-22 04:14:32 INFO  Main:21 - 
+Do you wanna enable the Developer Mode ?
+2019-01-22 04:14:32 INFO  Main:21 - 0 - No
+2019-01-22 04:14:32 INFO  Main:21 - 1 - Yes
+2019-01-23 02:23:27 INFO  Main:16 - Welcome !
+2019-01-23 02:23:27 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:23:27 INFO  Main:16 - 0 - No
+2019-01-23 02:23:27 INFO  Main:16 - 1 - Yes
+2019-01-23 02:23:31 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:23:31 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:23:31 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:23:31 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:23:34 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:23:34 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:23:34 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:23:34 INFO  Main:16 - 2 - Defender
+2019-01-23 02:23:34 INFO  Main:16 - 3 - Duel
+2019-01-23 02:23:34 INFO  Main:16 - 4 - Go back
+2019-01-23 02:23:38 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-23 02:23:38 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:23:59 INFO  Main:16 - Round : 1
+2019-01-23 02:23:59 INFO  Main:16 - Computer's proposition : 94524
+2019-01-23 02:23:59 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:24:03 INFO  Main:16 - Round : 2
+2019-01-23 02:24:04 INFO  Main:16 - The computer couldn't find any combination which matches with the responses you gave. You might have done a mistake ! End of the game.
+2019-01-23 02:24:04 INFO  Main:16 -  
+2019-01-23 02:24:04 INFO  Main:16 - Welcome !
+2019-01-23 02:24:04 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:24:04 INFO  Main:16 - 0 - No
+2019-01-23 02:24:04 INFO  Main:16 - 1 - Yes
+2019-01-23 02:24:43 INFO  Main:16 - Welcome !
+2019-01-23 02:24:43 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:24:43 INFO  Main:16 - 0 - No
+2019-01-23 02:24:43 INFO  Main:16 - 1 - Yes
+2019-01-23 02:24:44 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:24:44 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:24:44 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:24:44 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:24:48 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:24:48 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:24:48 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:24:48 INFO  Main:16 - 2 - Defender
+2019-01-23 02:24:48 INFO  Main:16 - 3 - Duel
+2019-01-23 02:24:48 INFO  Main:16 - 4 - Go back
+2019-01-23 02:24:49 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-23 02:24:49 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:24:53 INFO  Main:16 - Round : 1
+2019-01-23 02:24:53 INFO  Main:16 - Computer's proposition : 32048
+2019-01-23 02:24:53 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:24:54 INFO  Main:16 - You didn't respect the rule. Enter a valid answer for the computer :
+2019-01-23 02:25:13 INFO  Main:16 - Welcome !
+2019-01-23 02:25:13 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:25:13 INFO  Main:16 - 0 - No
+2019-01-23 02:25:13 INFO  Main:16 - 1 - Yes
+2019-01-23 02:25:14 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:25:14 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:25:14 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:25:14 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:25:16 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:25:16 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:25:16 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:25:16 INFO  Main:16 - 2 - Defender
+2019-01-23 02:25:16 INFO  Main:16 - 3 - Duel
+2019-01-23 02:25:16 INFO  Main:16 - 4 - Go back
+2019-01-23 02:25:17 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-23 02:25:17 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:25:20 INFO  Main:16 - Round : 1
+2019-01-23 02:25:20 INFO  Main:16 - Computer's proposition : 32990
+2019-01-23 02:25:20 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:25:23 INFO  Main:16 - You didn't respect the rule. Enter a valid answer for the computer :
+2019-01-23 02:25:28 INFO  Main:16 - Round : 2
+2019-01-23 02:25:29 INFO  Main:16 - Computer's proposition : 83742
+2019-01-23 02:25:29 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:18 INFO  Main:16 - Round : 3
+2019-01-23 02:26:19 INFO  Main:16 - Computer's proposition : 45332
+2019-01-23 02:26:19 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:24 INFO  Main:16 - Round : 4
+2019-01-23 02:26:24 INFO  Main:16 - Computer's proposition : 15324
+2019-01-23 02:26:24 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:32 INFO  Main:16 - Round : 5
+2019-01-23 02:26:32 INFO  Main:16 - Computer's proposition : 41352
+2019-01-23 02:26:32 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:36 INFO  Main:16 - Round : 6
+2019-01-23 02:26:36 INFO  Main:16 - Computer's proposition : 43512
+2019-01-23 02:26:36 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:41 INFO  Main:16 - Round : 7
+2019-01-23 02:26:41 INFO  Main:16 - Computer's proposition : 12453
+2019-01-23 02:26:41 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:26:45 INFO  Main:16 - Round : 8
+2019-01-23 02:26:45 INFO  Main:16 - Computer's proposition : 12345
+2019-01-23 02:26:45 INFO  Main:16 - The computer has found your combination in 8 rounds !
+2019-01-23 02:26:45 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 02:26:45 INFO  Main:16 - 1 - Replay
+2019-01-23 02:26:45 INFO  Main:16 - 2 - Play a different game
+2019-01-23 02:26:45 INFO  Main:16 - 3 - Quit game
+2019-01-23 02:28:17 INFO  Main:16 - Welcome !
+2019-01-23 02:28:17 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:28:17 INFO  Main:16 - 0 - No
+2019-01-23 02:28:17 INFO  Main:16 - 1 - Yes
+2019-01-23 02:28:19 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:28:19 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:28:19 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:28:19 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:28:21 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:28:21 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:28:21 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:28:21 INFO  Main:16 - 2 - Defender
+2019-01-23 02:28:21 INFO  Main:16 - 3 - Duel
+2019-01-23 02:28:21 INFO  Main:16 - 4 - Go back
+2019-01-23 02:28:22 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-23 02:28:22 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:28:25 INFO  Main:16 - Round : 1
+2019-01-23 02:28:25 INFO  Main:16 - Computer's proposition : 03477
+2019-01-23 02:28:25 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:28:29 INFO  Main:16 - Round : 2
+2019-01-23 02:28:29 INFO  Main:16 - Computer's proposition : 48042
+2019-01-23 02:28:29 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:28:33 INFO  Main:16 - Round : 3
+2019-01-23 02:28:33 INFO  Main:16 - Computer's proposition : 92954
+2019-01-23 02:28:33 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:28:42 INFO  Main:16 - Round : 4
+2019-01-23 02:28:42 INFO  Main:16 - Computer's proposition : 64522
+2019-01-23 02:28:42 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:28:46 INFO  Main:16 - Round : 5
+2019-01-23 02:28:46 INFO  Main:16 - Computer's proposition : 80143
+2019-01-23 02:28:46 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:28:53 INFO  Main:16 - Round : 6
+2019-01-23 02:28:53 INFO  Main:16 - Computer's proposition : 28303
+2019-01-23 02:28:53 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:29:00 INFO  Main:16 - Round : 7
+2019-01-23 02:29:00 INFO  Main:16 - Computer's proposition : 39194
+2019-01-23 02:29:00 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:29:05 INFO  Main:16 - Round : 8
+2019-01-23 02:29:05 INFO  Main:16 - Computer's proposition : 95839
+2019-01-23 02:29:05 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:29:46 INFO  Main:16 - Sadly, the computer didn't find the combination which was : 12345
+2019-01-23 02:29:46 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 02:29:46 INFO  Main:16 - 1 - Replay
+2019-01-23 02:29:46 INFO  Main:16 - 2 - Play a different game
+2019-01-23 02:29:46 INFO  Main:16 - 3 - Quit game
+2019-01-23 02:29:55 INFO  Main:16 - Welcome !
+2019-01-23 02:29:55 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:29:55 INFO  Main:16 - 0 - No
+2019-01-23 02:29:55 INFO  Main:16 - 1 - Yes
+2019-01-23 02:29:57 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:29:57 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:29:57 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:29:57 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:29:59 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:29:59 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:29:59 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:29:59 INFO  Main:16 - 2 - Defender
+2019-01-23 02:29:59 INFO  Main:16 - 3 - Duel
+2019-01-23 02:29:59 INFO  Main:16 - 4 - Go back
+2019-01-23 02:30:01 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 02:30:01 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:30:04 INFO  Main:16 - Round : 1
+2019-01-23 02:30:04 INFO  Main:16 - Computer's proposition : 22001
+2019-01-23 02:30:04 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:30:07 INFO  Main:16 - Round : 2
+2019-01-23 02:30:07 INFO  Main:16 - Computer's proposition : 02377
+2019-01-23 02:30:07 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:30:11 INFO  Main:16 - Round : 3
+2019-01-23 02:30:11 INFO  Main:16 - Computer's proposition : 58777
+2019-01-23 02:30:11 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:30:24 INFO  Main:16 - Round : 4
+2019-01-23 02:30:24 INFO  Main:16 - Computer's proposition : 22364
+2019-01-23 02:30:24 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:30:37 INFO  Main:16 - Round : 5
+2019-01-23 02:30:37 INFO  Main:16 - Computer's proposition : 07333
+2019-01-23 02:30:37 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:31:35 INFO  Main:16 - Round : 6
+2019-01-23 02:31:35 INFO  Main:16 - Computer's proposition : 22315
+2019-01-23 02:31:35 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:31:40 INFO  Main:16 - Round : 7
+2019-01-23 02:31:40 INFO  Main:16 - Computer's proposition : 62312
+2019-01-23 02:31:40 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:31:58 INFO  Main:16 - Round : 8
+2019-01-23 02:31:58 INFO  Main:16 - Computer's proposition : 32362
+2019-01-23 02:31:58 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:32:01 INFO  Main:16 - Round : 9
+2019-01-23 02:32:01 INFO  Main:16 - Computer's proposition : 02460
+2019-01-23 02:32:01 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:32:08 INFO  Main:16 - Round : 10
+2019-01-23 02:32:08 INFO  Main:16 - Computer's proposition : 22310
+2019-01-23 02:32:08 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:32:11 INFO  Main:16 - Round : 11
+2019-01-23 02:32:11 INFO  Main:16 - Computer's proposition : 12356
+2019-01-23 02:32:11 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:32:15 INFO  Main:16 - Round : 12
+2019-01-23 02:32:15 INFO  Main:16 - Computer's proposition : 62328
+2019-01-23 02:32:15 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:32:51 INFO  Main:16 - Sadly, the computer didn't find the combination which was : 12345
+2019-01-23 02:32:51 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 02:32:51 INFO  Main:16 - 1 - Replay
+2019-01-23 02:32:51 INFO  Main:16 - 2 - Play a different game
+2019-01-23 02:32:51 INFO  Main:16 - 3 - Quit game
+2019-01-23 02:42:43 INFO  Main:16 - Welcome !
+2019-01-23 02:42:43 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:42:43 INFO  Main:16 - 0 - No
+2019-01-23 02:42:43 INFO  Main:16 - 1 - Yes
+2019-01-23 02:42:44 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:42:44 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:42:44 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:42:44 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:42:46 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:42:46 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:42:46 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:42:46 INFO  Main:16 - 2 - Defender
+2019-01-23 02:42:46 INFO  Main:16 - 3 - Duel
+2019-01-23 02:42:46 INFO  Main:16 - 4 - Go back
+2019-01-23 02:42:47 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 02:42:47 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:42:49 INFO  Main:16 - Round : 1
+2019-01-23 02:42:49 INFO  Main:16 - Computer's proposition : 46185
+2019-01-23 02:42:49 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:01 INFO  Main:16 - Round : 2
+2019-01-23 02:43:02 INFO  Main:16 - Computer's proposition : 52184
+2019-01-23 02:43:02 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:26 INFO  Main:16 - Round : 3
+2019-01-23 02:43:26 INFO  Main:16 - Computer's proposition : 51124
+2019-01-23 02:43:26 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:38 INFO  Main:16 - Round : 4
+2019-01-23 02:43:38 INFO  Main:16 - Computer's proposition : 18285
+2019-01-23 02:43:38 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:47 INFO  Main:16 - Round : 5
+2019-01-23 02:43:47 INFO  Main:16 - Computer's proposition : 14589
+2019-01-23 02:43:47 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:53 INFO  Main:16 - Round : 6
+2019-01-23 02:43:53 INFO  Main:16 - Computer's proposition : 14882
+2019-01-23 02:43:53 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:43:58 INFO  Main:16 - Round : 7
+2019-01-23 02:43:58 INFO  Main:16 - Computer's proposition : 42881
+2019-01-23 02:43:58 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:04 INFO  Main:16 - Round : 8
+2019-01-23 02:44:04 INFO  Main:16 - Computer's proposition : 48582
+2019-01-23 02:44:04 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:13 INFO  Main:16 - Round : 9
+2019-01-23 02:44:13 INFO  Main:16 - Computer's proposition : 12895
+2019-01-23 02:44:13 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:17 INFO  Main:16 - Round : 10
+2019-01-23 02:44:17 INFO  Main:16 - Computer's proposition : 12415
+2019-01-23 02:44:17 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:21 INFO  Main:16 - Round : 11
+2019-01-23 02:44:21 INFO  Main:16 - Computer's proposition : 12405
+2019-01-23 02:44:21 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:25 INFO  Main:16 - Round : 12
+2019-01-23 02:44:25 INFO  Main:16 - Computer's proposition : 12435
+2019-01-23 02:44:25 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:33 INFO  Main:16 - Sadly, the computer didn't find the combination which was : 12345
+2019-01-23 02:44:33 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 02:44:33 INFO  Main:16 - 1 - Replay
+2019-01-23 02:44:33 INFO  Main:16 - 2 - Play a different game
+2019-01-23 02:44:33 INFO  Main:16 - 3 - Quit game
+2019-01-23 02:44:42 INFO  Main:16 - Welcome !
+2019-01-23 02:44:42 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:44:42 INFO  Main:16 - 0 - No
+2019-01-23 02:44:42 INFO  Main:16 - 1 - Yes
+2019-01-23 02:44:44 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:44:44 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:44:44 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:44:44 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:44:47 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:44:47 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:44:47 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:44:47 INFO  Main:16 - 2 - Defender
+2019-01-23 02:44:47 INFO  Main:16 - 3 - Duel
+2019-01-23 02:44:47 INFO  Main:16 - 4 - Go back
+2019-01-23 02:44:49 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 02:44:49 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:44:52 INFO  Main:16 - Round : 1
+2019-01-23 02:44:52 INFO  Main:16 - Computer's proposition : 23521
+2019-01-23 02:44:52 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:44:57 INFO  Main:16 - Round : 2
+2019-01-23 02:44:58 INFO  Main:16 - Computer's proposition : 75254
+2019-01-23 02:44:58 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:32 INFO  Main:16 - Round : 3
+2019-01-23 02:45:32 INFO  Main:16 - Computer's proposition : 37870
+2019-01-23 02:45:32 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:37 INFO  Main:16 - Round : 4
+2019-01-23 02:45:37 INFO  Main:16 - Computer's proposition : 69195
+2019-01-23 02:45:37 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:41 INFO  Main:16 - Round : 5
+2019-01-23 02:45:41 INFO  Main:16 - Computer's proposition : 50697
+2019-01-23 02:45:41 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:45 INFO  Main:16 - Round : 6
+2019-01-23 02:45:45 INFO  Main:16 - Computer's proposition : 99336
+2019-01-23 02:45:45 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:48 INFO  Main:16 - Round : 7
+2019-01-23 02:45:48 INFO  Main:16 - Computer's proposition : 14415
+2019-01-23 02:45:48 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:45:59 INFO  Main:16 - Welcome !
+2019-01-23 02:45:59 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:45:59 INFO  Main:16 - 0 - No
+2019-01-23 02:45:59 INFO  Main:16 - 1 - Yes
+2019-01-23 02:46:02 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:46:02 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:46:02 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:46:02 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:46:04 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:46:04 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:46:04 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:46:04 INFO  Main:16 - 2 - Defender
+2019-01-23 02:46:04 INFO  Main:16 - 3 - Duel
+2019-01-23 02:46:04 INFO  Main:16 - 4 - Go back
+2019-01-23 02:46:05 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 02:46:05 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:46:08 INFO  Main:16 - Round : 1
+2019-01-23 02:46:08 INFO  Main:16 - Computer's proposition : 60723
+2019-01-23 02:46:08 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:13 INFO  Main:16 - Round : 2
+2019-01-23 02:46:13 INFO  Main:16 - Computer's proposition : 84650
+2019-01-23 02:46:13 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:17 INFO  Main:16 - Round : 3
+2019-01-23 02:46:17 INFO  Main:16 - Computer's proposition : 13844
+2019-01-23 02:46:17 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:22 INFO  Main:16 - Round : 4
+2019-01-23 02:46:22 INFO  Main:16 - Computer's proposition : 36884
+2019-01-23 02:46:22 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:28 INFO  Main:16 - Round : 5
+2019-01-23 02:46:28 INFO  Main:16 - Computer's proposition : 43349
+2019-01-23 02:46:28 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:32 INFO  Main:16 - Round : 6
+2019-01-23 02:46:32 INFO  Main:16 - Computer's proposition : 03446
+2019-01-23 02:46:32 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:46:37 INFO  Main:16 - Round : 7
+2019-01-23 02:46:37 INFO  Main:16 - The computer couldn't find any combination which matches with the responses you gave. You might have done a mistake ! End of the game.
+2019-01-23 02:46:37 INFO  Main:16 -  
+2019-01-23 02:46:37 INFO  Main:16 - Welcome !
+2019-01-23 02:46:37 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:46:37 INFO  Main:16 - 0 - No
+2019-01-23 02:46:37 INFO  Main:16 - 1 - Yes
+2019-01-23 02:47:53 INFO  Main:16 - Welcome !
+2019-01-23 02:47:53 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 02:47:53 INFO  Main:16 - 0 - No
+2019-01-23 02:47:53 INFO  Main:16 - 1 - Yes
+2019-01-23 02:47:56 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 02:47:56 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 02:47:56 INFO  Main:16 - 1 - HigherLower
+2019-01-23 02:47:56 INFO  Main:16 - 2 - Mastermind
+2019-01-23 02:47:57 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 02:47:57 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 02:47:57 INFO  Main:16 - 1 - Challenger
+2019-01-23 02:47:57 INFO  Main:16 - 2 - Defender
+2019-01-23 02:47:57 INFO  Main:16 - 3 - Duel
+2019-01-23 02:47:57 INFO  Main:16 - 4 - Go back
+2019-01-23 02:47:58 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 02:47:58 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 02:48:01 INFO  Main:16 - Round : 1
+2019-01-23 02:48:01 INFO  Main:16 - Computer's proposition : 11373
+2019-01-23 02:48:01 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:09 INFO  Main:16 - Round : 2
+2019-01-23 02:48:10 INFO  Main:16 - Computer's proposition : 10193
+2019-01-23 02:48:10 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:15 INFO  Main:16 - Round : 3
+2019-01-23 02:48:15 INFO  Main:16 - Computer's proposition : 88173
+2019-01-23 02:48:15 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:19 INFO  Main:16 - Round : 4
+2019-01-23 02:48:19 INFO  Main:16 - Computer's proposition : 19331
+2019-01-23 02:48:19 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:22 INFO  Main:16 - Round : 5
+2019-01-23 02:48:22 INFO  Main:16 - Computer's proposition : 17394
+2019-01-23 02:48:22 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:26 INFO  Main:16 - Round : 6
+2019-01-23 02:48:26 INFO  Main:16 - Computer's proposition : 11634
+2019-01-23 02:48:26 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:32 INFO  Main:16 - Round : 7
+2019-01-23 02:48:32 INFO  Main:16 - Computer's proposition : 13367
+2019-01-23 02:48:32 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:35 INFO  Main:16 - Round : 8
+2019-01-23 02:48:35 INFO  Main:16 - Computer's proposition : 15394
+2019-01-23 02:48:35 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:39 INFO  Main:16 - Round : 9
+2019-01-23 02:48:39 INFO  Main:16 - Computer's proposition : 10349
+2019-01-23 02:48:39 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:48:56 INFO  Main:16 - Round : 10
+2019-01-23 02:48:56 INFO  Main:16 - Computer's proposition : 10354
+2019-01-23 02:48:56 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:49:00 INFO  Main:16 - Round : 11
+2019-01-23 02:49:00 INFO  Main:16 - Computer's proposition : 10394
+2019-01-23 02:49:00 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 02:49:38 INFO  Main:16 - Round : 12
+2019-01-23 02:49:38 INFO  Main:16 - Computer's proposition : 15346
+2019-01-23 02:49:38 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:01:02 INFO  Main:16 - Welcome !
+2019-01-23 03:01:02 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:01:02 INFO  Main:16 - 0 - No
+2019-01-23 03:01:02 INFO  Main:16 - 1 - Yes
+2019-01-23 03:01:04 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 03:01:04 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:01:04 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:01:04 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:01:05 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:01:05 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:01:05 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:01:05 INFO  Main:16 - 2 - Defender
+2019-01-23 03:01:05 INFO  Main:16 - 3 - Duel
+2019-01-23 03:01:05 INFO  Main:16 - 4 - Go back
+2019-01-23 03:01:06 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 03:01:06 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 03:01:12 INFO  Main:16 - Round : 1
+2019-01-23 03:01:12 INFO  Main:16 - Computer's proposition : 37645
+2019-01-23 03:01:12 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:01:17 INFO  Main:16 - Round : 2
+2019-01-23 03:01:17 INFO  Main:16 - Computer's proposition : 00340
+2019-01-23 03:01:17 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:05:49 INFO  Main:16 - Welcome !
+2019-01-23 03:05:49 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:05:49 INFO  Main:16 - 0 - No
+2019-01-23 03:05:49 INFO  Main:16 - 1 - Yes
+2019-01-23 03:05:51 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 03:05:51 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:05:51 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:05:51 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:05:51 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:05:51 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:05:51 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:05:51 INFO  Main:16 - 2 - Defender
+2019-01-23 03:05:51 INFO  Main:16 - 3 - Duel
+2019-01-23 03:05:51 INFO  Main:16 - 4 - Go back
+2019-01-23 03:05:52 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 03:05:52 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 03:05:55 INFO  Main:16 - Round : 1
+2019-01-23 03:05:55 INFO  Main:16 - Computer's proposition : 26151
+2019-01-23 03:05:55 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:02 INFO  Main:16 - Round : 2
+2019-01-23 03:06:03 INFO  Main:16 - Computer's proposition : 50012
+2019-01-23 03:06:03 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:13 INFO  Main:16 - Round : 3
+2019-01-23 03:06:13 INFO  Main:16 - Computer's proposition : 02526
+2019-01-23 03:06:13 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:22 INFO  Main:16 - Round : 4
+2019-01-23 03:06:22 INFO  Main:16 - Computer's proposition : 61570
+2019-01-23 03:06:22 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:27 INFO  Main:16 - Round : 5
+2019-01-23 03:06:27 INFO  Main:16 - Computer's proposition : 12385
+2019-01-23 03:06:27 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:31 INFO  Main:16 - Round : 6
+2019-01-23 03:06:31 INFO  Main:16 - Computer's proposition : 12305
+2019-01-23 03:06:31 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:33 INFO  Main:16 - Round : 7
+2019-01-23 03:06:33 INFO  Main:16 - Computer's proposition : 12365
+2019-01-23 03:06:33 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:35 INFO  Main:16 - Round : 8
+2019-01-23 03:06:35 INFO  Main:16 - Computer's proposition : 12345
+2019-01-23 03:06:35 INFO  Main:16 - The computer has found your combination in 8 rounds !
+2019-01-23 03:06:35 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 03:06:35 INFO  Main:16 - 1 - Replay
+2019-01-23 03:06:35 INFO  Main:16 - 2 - Play a different game
+2019-01-23 03:06:35 INFO  Main:16 - 3 - Quit game
+2019-01-23 03:06:41 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 03:06:41 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 03:06:45 INFO  Main:16 - Round : 1
+2019-01-23 03:06:45 INFO  Main:16 - Computer's proposition : 01857
+2019-01-23 03:06:45 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:06:52 INFO  Main:16 - Round : 2
+2019-01-23 03:06:53 INFO  Main:16 - Computer's proposition : 24587
+2019-01-23 03:06:53 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:07:01 INFO  Main:16 - Round : 3
+2019-01-23 03:07:01 INFO  Main:16 - Computer's proposition : 53864
+2019-01-23 03:07:01 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:07:10 INFO  Main:16 - Round : 4
+2019-01-23 03:07:10 INFO  Main:16 - Computer's proposition : 37154
+2019-01-23 03:07:10 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:07:15 INFO  Main:16 - Round : 5
+2019-01-23 03:07:15 INFO  Main:16 - Computer's proposition : 45812
+2019-01-23 03:07:15 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:07:22 INFO  Main:16 - Round : 6
+2019-01-23 03:07:22 INFO  Main:16 - Computer's proposition : 08465
+2019-01-23 03:07:22 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:07:30 INFO  Main:16 - Round : 7
+2019-01-23 03:07:30 INFO  Main:16 - Computer's proposition : 02468
+2019-01-23 03:07:30 INFO  Main:16 - The computer has found your combination in 7 rounds !
+2019-01-23 03:07:30 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 03:07:30 INFO  Main:16 - 1 - Replay
+2019-01-23 03:07:30 INFO  Main:16 - 2 - Play a different game
+2019-01-23 03:07:30 INFO  Main:16 - 3 - Quit game
+2019-01-23 03:10:13 INFO  Main:16 - Welcome !
+2019-01-23 03:10:13 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:10:13 INFO  Main:16 - 0 - No
+2019-01-23 03:10:13 INFO  Main:16 - 1 - Yes
+2019-01-23 03:10:14 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 03:10:14 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:10:14 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:10:14 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:10:16 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:10:16 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:10:16 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:10:16 INFO  Main:16 - 2 - Defender
+2019-01-23 03:10:16 INFO  Main:16 - 3 - Duel
+2019-01-23 03:10:16 INFO  Main:16 - 4 - Go back
+2019-01-23 03:10:17 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 12 rounds to find it.
+2019-01-23 03:10:17 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-23 03:10:36 INFO  Main:16 - You didn't respect the rule. Enter a valid combination with 5 numbers :
+2019-01-23 03:10:40 INFO  Main:16 - Round : 1
+2019-01-23 03:10:40 INFO  Main:16 - Computer's proposition : 72773
+2019-01-23 03:10:40 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-23 03:12:34 INFO  Main:16 - Welcome !
+2019-01-23 03:12:34 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:12:34 INFO  Main:16 - 0 - No
+2019-01-23 03:12:34 INFO  Main:16 - 1 - Yes
+2019-01-23 03:12:36 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-23 03:12:36 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:12:36 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:12:36 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:12:38 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:12:38 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:12:38 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:12:38 INFO  Main:16 - 2 - Defender
+2019-01-23 03:12:38 INFO  Main:16 - 3 - Duel
+2019-01-23 03:12:38 INFO  Main:16 - 4 - Go back
+2019-01-23 03:12:40 INFO  Main:16 - 
+Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have 12 rounds to find it.
+2019-01-23 03:12:40 INFO  Main:16 - The computer created its combination.
+2019-01-23 03:12:40 INFO  Main:16 - 
+Round : 1
+2019-01-23 03:12:40 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:13:06 INFO  Main:16 - Welcome !
+2019-01-23 03:13:06 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-23 03:13:06 INFO  Main:16 - 0 - No
+2019-01-23 03:13:06 INFO  Main:16 - 1 - Yes
+2019-01-23 03:13:07 INFO  Main:16 - You have chosen to enable the Developer Mode.
+2019-01-23 03:13:07 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-23 03:13:07 INFO  Main:16 - 1 - HigherLower
+2019-01-23 03:13:07 INFO  Main:16 - 2 - Mastermind
+2019-01-23 03:13:11 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-23 03:13:11 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-23 03:13:11 INFO  Main:16 - 1 - Challenger
+2019-01-23 03:13:11 INFO  Main:16 - 2 - Defender
+2019-01-23 03:13:11 INFO  Main:16 - 3 - Duel
+2019-01-23 03:13:11 INFO  Main:16 - 4 - Go back
+2019-01-23 03:13:13 INFO  Main:16 - 
+Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have 12 rounds to find it.
+2019-01-23 03:13:13 INFO  Main:16 - The computer created its combination.
+2019-01-23 03:13:13 INFO  Main:16 - Combination : 24133
+2019-01-23 03:13:13 INFO  Main:16 - 
+Round : 1
+2019-01-23 03:13:13 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:13:31 INFO  Main:16 - Proposition : 01234 --> - 1 well placed - 3 misplaced
+2019-01-23 03:13:31 INFO  Main:16 - 
+Round : 2
+2019-01-23 03:13:31 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-23 03:13:50 INFO  Main:16 - Congratulations, you found the combination ! You found it in 2 rounds !
+2019-01-23 03:13:50 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-23 03:13:50 INFO  Main:16 - 1 - Replay
+2019-01-23 03:13:50 INFO  Main:16 - 2 - Play a different game
+2019-01-23 03:13:50 INFO  Main:16 - 3 - Quit game

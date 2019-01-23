@@ -17,7 +17,7 @@ public abstract class Mode {
     private int hlLength;
     private int mmLength;
 
-    //private int mmPossibilities;
+    private int mmPossibilities;
 
     private ArrayList<String> possibleCombinations;
 
@@ -28,7 +28,7 @@ public abstract class Mode {
         hlLength = g.getHigherLowerLength();
         mmLength = g.getMastermindLength();
 
-        //mmPossibilities = g.getMastermindPossibilities();
+        mmPossibilities = g.getMastermindPossibilities();
 
         possibleCombinations = createCombinations();
     }
@@ -154,7 +154,7 @@ public abstract class Mode {
             if (game.equalsIgnoreCase("HigherLower")) {
                 for (int i = 0; i < hlLength; i++) code.append(random.nextInt(10));
             } else {
-                for (int i = 0; i < mmLength; i++) code.append(random.nextInt(10));
+                for (int i = 0; i < mmLength; i++) code.append(random.nextInt(mmPossibilities));
             }
         } else {
             code = new StringBuilder(codesBefore[1]);
@@ -237,56 +237,6 @@ public abstract class Mode {
                                 }
                             }
                         }
-                    } else if (difference.charAt(0) == '0') {
-                        for (int i = 0; i < code.length(); i++) {
-                            for (int j = 0; j < possibleCombinations.size(); j++) {
-                                if (possibleCombinations.get(j).charAt(i) == code.charAt(i)) {
-                                    possibleCombinations.remove(j);
-                                    j--;
-                                }
-                            }
-                        }
-
-                        HashMap<Integer, Integer> checkedIndexes = new HashMap<>();
-
-                        for (int i = 0; i < possibleCombinations.size(); i++) {
-                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
-                                for (int k = 0; k < code.length(); k++) {
-                                    if (!checkedIndexes.containsKey(j)) {
-                                        if (!checkedIndexes.containsValue(k)) {
-                                            if (possibleCombinations.get(i).charAt(j) == code.charAt(k)) {
-                                                checkedIndexes.put(j, k);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            int misplaced = difference.charAt(1) - 48;
-
-                            if (checkedIndexes.size() < misplaced) {
-                                possibleCombinations.remove(i);
-                                i--;
-                            }
-                        }
-                    } else if (difference.charAt(1) == '0') {
-                        int a = 0;
-                        int wellPlaced = difference.charAt(0) - 48;
-
-                        for (int i = 0; i < possibleCombinations.size(); i++) {
-                            for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
-                                if (code.charAt(j) == possibleCombinations.get(i).charAt(j)) {
-                                    a++;
-                                }
-                            }
-
-                            if (a != wellPlaced) {
-                                possibleCombinations.remove(i);
-                                i--;
-                            }
-
-                            a = 0;
-                        }
                     } else {
                         int wellPlaced = difference.charAt(0) - 48;
                         int misplaced = difference.charAt(1) - 48;
@@ -299,6 +249,14 @@ public abstract class Mode {
                                 if (code.charAt(j) == possibleCombinations.get(i).charAt(j)) {
                                     checkedIndexes.put(j, j);
                                 }
+                            }
+
+                            if (checkedIndexes.size() != wellPlaced) {
+                                possibleCombinations.remove(i);
+                                i--;
+
+                                checkedIndexes.clear();
+                                continue;
                             }
 
                             for (int j = 0; j < possibleCombinations.get(i).length(); j++) {
@@ -345,21 +303,34 @@ public abstract class Mode {
      */
     protected String setupCode() {
         int length;
+        String userCode;
 
         if (game.equals("HigherLower")) {
             length = hlLength;
-        } else {
-            length = mmLength;
-        }
-
-        String userCode = scanner.next();
-
-        while (userCode.length() != length || !userCode.matches("[0-9]+")) {
-            if (userCode.equalsIgnoreCase("stop")) stop();
-
-            Main.display("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
 
             userCode = scanner.next();
+
+            while (userCode.length() != length || !userCode.matches("[0-9]+")) {
+                if (userCode.equalsIgnoreCase("stop")) stop();
+
+                Main.display("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
+
+                userCode = scanner.next();
+            }
+        } else {
+            length = mmLength;
+
+            System.out.println("The configuration allows " + mmPossibilities + " possibilities. Every number then has to be between 0 and " + (mmPossibilities - 1) + ".");
+
+            userCode = scanner.next();
+
+            while (userCode.length() != length || !userCode.matches("[0-" + (mmPossibilities - 1) + "]+")) {
+                if (userCode.equalsIgnoreCase("stop")) stop();
+
+                Main.display("You didn't respect the rule. Enter a valid combination with " + length + " numbers :");
+
+                userCode = scanner.next();
+            }
         }
 
         return userCode;
@@ -399,7 +370,7 @@ public abstract class Mode {
 
                 difference = scanner.next();
 
-                for (int i = 0; i < difference.length(); i++) containsFalse = (!("0123456789".contains(Character.toString(difference.charAt(i)))));
+                for (int i = 0; i < difference.length(); i++) containsFalse = (!difference.matches("[0-9]+"));
 
                 while (difference.length() != 2 || containsFalse) {
                     if (difference.equalsIgnoreCase("stop")) stop();
@@ -409,7 +380,7 @@ public abstract class Mode {
 
                     difference = scanner.next();
 
-                    for (int i = 0; i < difference.length(); i++) containsFalse = (!("0123456789".contains(Character.toString(difference.charAt(i)))));
+                    for (int i = 0; i < difference.length(); i++) containsFalse = (!difference.matches("[0-9]+"));
                 }
 
                 break;
@@ -418,6 +389,11 @@ public abstract class Mode {
         return difference;
     }
 
+    /**
+     * Creates a list containing all the different possibilities for a game of Masterming.
+     *
+     * @return A list which contains all the possibilities.
+     */
     protected ArrayList<String> createCombinations() {
         ArrayList<String> combinations = new ArrayList<>();
 
@@ -430,7 +406,9 @@ public abstract class Mode {
                 number = "0" + number;
             }
 
-            combinations.add(number);
+            if (number.matches("[0-" + (mmPossibilities - 1) + "]+")) {
+                combinations.add(number);
+            }
         }
 
         return combinations;

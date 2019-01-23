@@ -29,7 +29,7 @@ public class Duel extends Mode {
         } else {
             Main.display("Please enter a combination with " + g.getMastermindLength() + " numbers : (" + g.getMastermindLength() + " numbers)");
 
-            for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(10));
+            for (int i = 0; i < g.getMastermindLength(); i++) code += String.valueOf(random.nextInt(g.getMastermindPossibilities()));
         }
 
         String userCode = setupCode();
