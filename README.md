@@ -13,13 +13,13 @@ Compilation de deux jeux : Le Plus ou Moins et le Mastermind. Jouable en 3 diff�
   * JDK 10.0.2
   * Log4J- Compiler le programme ( Pour IntelliJ) :
 
-1 - File / Projet Structure
-2 - Artifacts
-3 - Séléctionner le + ensuite JAR / (from modules with dependencies)
-4 - Choisir la Main class (main) puis OK
+1. File / Projet Structure
+2. Artifacts
+3. Séléctionner le + ensuite JAR / (from modules with dependencies)
+4. Choisir la Main class (main) puis OK
 
 ### Lancer le programme :
-1 - Ouvrir cmd (invite de commande)
-2 - Copier le chemin ou se trouve le .jar (jeu logique/out/artifacts/...)
-3 - Ecrire dans le cmd : “cd ” suivie du chemin ou se trouve le .jar
-4 - Entrer la commande : “java -jar le_nom_du_jar.jar” et lancer
+1. Ouvrir cmd (invite de commande)
+2. Copier le chemin ou se trouve le .jar (jeu logique/out/artifacts/...)
+3. Ecrire dans le cmd : “cd ” suivie du chemin ou se trouve le .jar
+4. Entrer la commande : “java -jar le_nom_du_jar.jar” et lancer
