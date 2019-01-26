@@ -18,7 +18,7 @@ public class Duel extends Mode {
 
         Main.display("\nWelcome in the Duel mode : both Challenger and Defender are played in this mode.\n" +
                 "Both of you and the computer will have to create a combination, and the fastest to guess the combination of its opponent wins.\n" +
-                "You'll have " + g.getRounds() + " rounds to find your opponent's code.\n");
+                "You'll have " + rounds + " rounds to find your opponent's code.\n");
 
         String code = "";
 
@@ -49,7 +49,7 @@ public class Duel extends Mode {
 
         String[] computerGuesses = {"", ""};
 
-        while (round <= g.getRounds()) {
+        while (round <= rounds) {
             Main.display("\nRound : " + round);
 
             if (userFound == 0) {

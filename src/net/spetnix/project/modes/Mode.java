@@ -14,8 +14,10 @@ public abstract class Mode {
     protected String game;
     Game g;
 
-    private int hlLength;
-    private int mmLength;
+    protected int rounds;
+    
+    protected int hlLength;
+    protected int mmLength;
 
     private int mmPossibilities;
 
@@ -25,6 +27,8 @@ public abstract class Mode {
         this.game = game;
         this.g = g;
 
+        rounds = g.getRounds();
+        
         hlLength = g.getHigherLowerLength();
         mmLength = g.getMastermindLength();
 

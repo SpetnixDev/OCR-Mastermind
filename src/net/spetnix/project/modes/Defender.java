@@ -13,12 +13,12 @@ public class Defender extends Mode {
      */
     public void run() {
         Main.display("\nWelcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it." +
-                " The computer will have " + g.getRounds() + " rounds to find it.");
+                " The computer will have " + rounds + " rounds to find it.");
 
         if (game.equals("HigherLower")) {
-            Main.display("Please enter a combination with " + g.getHigherLowerLength() + " numbers :");
+            Main.display("Please enter a combination with " + hlLength + " numbers :");
         } else {
-            Main.display("Please enter a combination with " + g.getMastermindLength() + " numbers :");
+            Main.display("Please enter a combination with " + mmLength + " numbers :");
         }
 
         String userCode = setupCode();
@@ -29,7 +29,7 @@ public class Defender extends Mode {
 
         String[] codes = {"", ""};
 
-        while (round <= g.getRounds()) {
+        while (round <= rounds) {
             Main.display("Round : " + round);
 
             code = computerGuess(round, difference, codes, game);

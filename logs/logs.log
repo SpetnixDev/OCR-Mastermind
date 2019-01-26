@@ -1538,3 +1538,134 @@ What do you wanna do ?
 2019-01-23 03:46:55 INFO  Main:16 - 1 - Replay
 2019-01-23 03:46:55 INFO  Main:16 - 2 - Play a different game
 2019-01-23 03:46:55 INFO  Main:16 - 3 - Quit game
+2019-01-25 00:41:37 INFO  Main:16 - Welcome !
+2019-01-25 00:41:37 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-25 00:41:37 INFO  Main:16 - 0 - No
+2019-01-25 00:41:37 INFO  Main:16 - 1 - Yes
+2019-01-25 00:42:06 INFO  Main:16 - Welcome !
+2019-01-25 00:42:06 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-25 00:42:06 INFO  Main:16 - 0 - No
+2019-01-25 00:42:06 INFO  Main:16 - 1 - Yes
+2019-01-25 00:42:08 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-25 00:42:08 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-25 00:42:08 INFO  Main:16 - 1 - HigherLower
+2019-01-25 00:42:08 INFO  Main:16 - 2 - Mastermind
+2019-01-25 00:42:09 INFO  Main:16 - You have chosen the following game : Mastermind !
+2019-01-25 00:42:09 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-25 00:42:09 INFO  Main:16 - 1 - Challenger
+2019-01-25 00:42:09 INFO  Main:16 - 2 - Defender
+2019-01-25 00:42:09 INFO  Main:16 - 3 - Duel
+2019-01-25 00:42:09 INFO  Main:16 - 4 - Go back
+2019-01-25 00:42:10 INFO  Main:16 - 
+Welcome in the Defender mode : in this mode, you'll have to create a combination and the computer will have to find it. The computer will have 8 rounds to find it.
+2019-01-25 00:42:10 INFO  Main:16 - Please enter a combination with 5 numbers :
+2019-01-25 00:42:15 INFO  Main:16 - Round : 1
+2019-01-25 00:42:15 INFO  Main:16 - Computer's proposition : 47169
+2019-01-25 00:42:15 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:42:27 INFO  Main:16 - Round : 2
+2019-01-25 00:42:28 INFO  Main:16 - Computer's proposition : 16468
+2019-01-25 00:42:28 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:42:38 INFO  Main:16 - Round : 3
+2019-01-25 00:42:38 INFO  Main:16 - Computer's proposition : 87697
+2019-01-25 00:42:38 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:42:53 INFO  Main:16 - Round : 4
+2019-01-25 00:42:53 INFO  Main:16 - Computer's proposition : 04173
+2019-01-25 00:42:53 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:43:03 INFO  Main:16 - Round : 5
+2019-01-25 00:43:03 INFO  Main:16 - Computer's proposition : 79114
+2019-01-25 00:43:03 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:43:10 INFO  Main:16 - Round : 6
+2019-01-25 00:43:10 INFO  Main:16 - Computer's proposition : 75154
+2019-01-25 00:43:10 INFO  Main:16 - Tell now the computer how many well placed numbers he got and misplaced numbers he got. Example : "12"
+2019-01-25 00:43:16 INFO  Main:16 - Round : 7
+2019-01-25 00:43:16 INFO  Main:16 - Computer's proposition : 75124
+2019-01-25 00:43:16 INFO  Main:16 - The computer has found your combination in 7 rounds !
+2019-01-25 00:43:16 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-25 00:43:16 INFO  Main:16 - 1 - Replay
+2019-01-25 00:43:16 INFO  Main:16 - 2 - Play a different game
+2019-01-25 00:43:16 INFO  Main:16 - 3 - Quit game
+2019-01-25 00:43:27 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-25 00:43:27 INFO  Main:16 - 0 - No
+2019-01-25 00:43:27 INFO  Main:16 - 1 - Yes
+2019-01-25 00:43:29 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-25 00:43:29 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-25 00:43:29 INFO  Main:16 - 1 - HigherLower
+2019-01-25 00:43:29 INFO  Main:16 - 2 - Mastermind
+2019-01-25 00:43:31 INFO  Main:16 - You have chosen the following game : HigherLower !
+2019-01-25 00:43:31 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-25 00:43:31 INFO  Main:16 - 1 - Challenger
+2019-01-25 00:43:31 INFO  Main:16 - 2 - Defender
+2019-01-25 00:43:31 INFO  Main:16 - 3 - Duel
+2019-01-25 00:43:31 INFO  Main:16 - 4 - Go back
+2019-01-25 00:43:34 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-25 00:43:34 INFO  Main:16 - 1 - HigherLower
+2019-01-25 00:43:34 INFO  Main:16 - 2 - Mastermind
+2019-01-25 00:43:52 INFO  Main:16 - You have chosen the following game : HigherLower !
+2019-01-25 00:43:52 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-25 00:43:52 INFO  Main:16 - 1 - Challenger
+2019-01-25 00:43:52 INFO  Main:16 - 2 - Defender
+2019-01-25 00:43:52 INFO  Main:16 - 3 - Duel
+2019-01-25 00:43:52 INFO  Main:16 - 4 - Go back
+2019-01-25 00:43:53 INFO  Main:16 - 
+Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have 8 rounds to find it.
+2019-01-25 00:43:53 INFO  Main:16 - The computer created its combination.
+2019-01-25 00:43:53 INFO  Main:16 - 
+Round : 1
+2019-01-25 00:43:53 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-25 00:43:55 INFO  Main:16 -  
+2019-01-25 00:43:55 INFO  Main:16 - Welcome !
+2019-01-25 00:43:55 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-25 00:43:55 INFO  Main:16 - 0 - No
+2019-01-25 00:43:55 INFO  Main:16 - 1 - Yes
+2019-01-25 00:45:44 INFO  Main:16 - Welcome !
+2019-01-25 00:45:44 INFO  Main:16 - 
+Do you wanna enable the Developer Mode ?
+2019-01-25 00:45:44 INFO  Main:16 - 0 - No
+2019-01-25 00:45:44 INFO  Main:16 - 1 - Yes
+2019-01-25 00:45:45 INFO  Main:16 - You have chosen not to enable the Developer Mode.
+2019-01-25 00:45:45 INFO  Main:16 - 
+Which game do you wanna play ?
+2019-01-25 00:45:45 INFO  Main:16 - 1 - HigherLower
+2019-01-25 00:45:45 INFO  Main:16 - 2 - Mastermind
+2019-01-25 00:45:47 INFO  Main:16 - You have chosen the following game : HigherLower !
+2019-01-25 00:45:47 INFO  Main:16 - 
+Which mode do you wanna play ?
+2019-01-25 00:45:47 INFO  Main:16 - 1 - Challenger
+2019-01-25 00:45:47 INFO  Main:16 - 2 - Defender
+2019-01-25 00:45:47 INFO  Main:16 - 3 - Duel
+2019-01-25 00:45:47 INFO  Main:16 - 4 - Go back
+2019-01-25 00:45:48 INFO  Main:16 - 
+Welcome in the Challenger mode : your goal will be to find the combination of the computer. You'll have 8 rounds to find it.
+2019-01-25 00:45:48 INFO  Main:16 - The computer created its combination.
+2019-01-25 00:45:48 INFO  Main:16 - 
+Round : 1
+2019-01-25 00:45:48 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-25 00:45:52 INFO  Main:16 - Proposition : 12345 --> ==><<
+2019-01-25 00:45:52 INFO  Main:16 - 
+Round : 2
+2019-01-25 00:45:52 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-25 00:46:03 INFO  Main:16 - Proposition : 12622 --> ==>><
+2019-01-25 00:46:03 INFO  Main:16 - 
+Round : 3
+2019-01-25 00:46:03 INFO  Main:16 - 
+Enter a combination with 5 numbers :
+2019-01-25 00:46:12 INFO  Main:16 - Congratulations, you found the combination ! You found it in 3 rounds !
+2019-01-25 00:46:12 INFO  Main:16 - 
+What do you wanna do ?
+2019-01-25 00:46:12 INFO  Main:16 - 1 - Replay
+2019-01-25 00:46:12 INFO  Main:16 - 2 - Play a different game
+2019-01-25 00:46:12 INFO  Main:16 - 3 - Quit game
